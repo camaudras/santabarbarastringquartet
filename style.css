@@ -247,17 +247,12 @@ p {
   gap: 14px;
 }
 
-.brand-mark {
-  display: grid;
-  place-items: center;
-  width: 48px;
-  aspect-ratio: 1;
-  border: 1px solid var(--ink);
-  border-radius: 50%;
-  font-family: var(--serif);
-  font-size: 1.2rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
+.brand-logo {
+  display: block;
+  width: 86px;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .brand-name {
@@ -1373,6 +1368,10 @@ p {
   color: white;
 }
 
+.footer-brand .brand-logo {
+  width: 78px;
+}
+
 .footer-brand p {
   max-width: 380px;
   margin-top: 22px;
@@ -1459,8 +1458,8 @@ textarea:focus-visible {
     grid-template-columns: auto 1fr auto;
   }
 
-  .brand-name {
-    display: none;
+  .brand-logo {
+    width: 74px;
   }
 
   .site-nav ul {
@@ -1521,9 +1520,8 @@ textarea:focus-visible {
     font-size: 1.16rem;
   }
 
-  .brand-mark {
-    width: 40px;
-    font-size: 1rem;
+  .brand-logo {
+    width: 64px;
   }
 
   .header-cta {
@@ -1701,7 +1699,11 @@ textarea:focus-visible {
   }
 
   .brand-name {
-    font-size: 1.03rem;
+    display: none;
+  }
+
+  .brand-logo {
+    width: 60px;
   }
 
   .hero-media {

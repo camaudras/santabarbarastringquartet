@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Contact - Santa Barbara String Quartet</title>
+
+  <meta
+    name="description"
+    content="Contact the Santa Barbara String Quartet about music for your wedding or special event."
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="contact">
+
+<header class="site-header">
+  <div class="site-shell header-inner">
+
+    <a class="site-title" href="index.html">
+      Santa Barbara String Quartet
+    </a>
+
+    <input
+      class="nav-toggle"
+      type="checkbox"
+      id="nav-toggle"
+      aria-label="Toggle navigation"
+    >
+
+    <label
+      class="nav-toggle-label"
+      for="nav-toggle"
+      aria-hidden="true"
+    >
+      <span></span>
+    </label>
+
+    <nav class="site-nav" aria-label="Primary">
+      <ul>
+
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+
+        <li>
+          <a href="about.html">About</a>
+        </li>
+
+        <li>
+          <a href="listenwatch.html">Listen/Watch</a>
+        </li>
+
+        <li>
+          <a href="contact.html" aria-current="page">Contact</a>
+        </li>
+
+        <li>
+          <a href="reviews.html">Reviews</a>
+        </li>
+
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+
+<main class="page-main">
+  <div class="site-shell">
+
+    <h1 class="page-heading">
+      Use the form below to contact us about performing for your special event!
+    </h1>
+
+
+    <div class="contact-grid">
+
+
+      <section class="contact-copy">
+
+        <h2>
+          We're excited to hear from you!
+        </h2>
+
+        <p>
+          Providing as much information about your event as possible
+          will help us give you the most accurate quote.
+        </p>
+
+        <p>
+          To request a proposal, complete the form or email
+          <a href="mailto:YOUR_EMAIL@example.com">
+            YOUR_EMAIL@example.com
+          </a>
+          with your event details.
+        </p>
+
+        <ol>
+
+          <li>
+            Name (first and last)
+          </li>
+
+          <li>
+            Event date
+          </li>
+
+          <li>
+            Event location/address
+          </li>
+
+          <li>
+            Type of ensemble requested
+
+            <ol class="ensemble-list">
+
+              <li>
+                Quartet — two violins, viola, cello
+              </li>
+
+              <li>
+                Trio — violin, viola, cello
+              </li>
+
+              <li>
+                Duo — violin, cello
+              </li>
+
+              <li>
+                Solo — violin or cello
+              </li>
+
+            </ol>
+          </li>
+
+        </ol>
+
+      </section>
+
+
+      <!--
+        ============================================================
+        CONTACT FORM
+
+        IMPORTANT:
+        GitHub Pages cannot send a form by itself.
+
+        Easiest option:
+        1. Go to Formspree
+        2. Create a form
+        3. Replace YOUR_FORMSPREE_ID below with your actual form ID
+
+        Example:
+        action="https://formspree.io/f/xabcdefg"
+        ============================================================
+      -->
+
+      <form
+        class="contact-form"
+        action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+        method="POST"
+      >
+
+
+        <div class="required-note">
+          * Indicates required field
+        </div>
+
+
+        <!-- NAME -->
+
+        <div class="form-row">
+
+          <span class="field-label">
+            Name *
+          </span>
+
+
+          <div class="name-row">
+
+
+            <div>
+
+              <label
+                class="sr-only"
+                for="first-name"
+              >
+                First name
+              </label>
+
+              <input
+                id="first-name"
+                name="first_name"
+                type="text"
+                required
+              >
+
+              <div class="sub-label">
+                First
+              </div>
+
+            </div>
+
+
+            <div>
+
+              <label
+                class="sr-only"
+                for="last-name"
+              >
+                Last name
+              </label>
+
+              <input
+                id="last-name"
+                name="last_name"
+                type="text"
+                required
+              >
+
+              <div class="sub-label">
+                Last
+              </div>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+        <!-- EMAIL -->
+
+        <div class="form-row">
+
+          <label for="email">
+            Email *
+          </label>
+
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+          >
+
+        </div>
+
+
+        <!-- DATE -->
+
+        <div class="form-row">
+
+          <label for="event-date">
+            Event date and time of service *
+          </label>
+
+          <input
+            id="event-date"
+            name="event_date_time"
+            type="text"
+            required
+          >
+
+        </div>
+
+
+        <!-- LOCATION -->
+
+        <div class="form-row">
+
+          <label for="venue">
+            Event venue/location *
+          </label>
+
+          <input
+            id="venue"
+            name="venue_location"
+            type="text"
+            required
+          >
+
+        </div>
+
+
+        <!-- MESSAGE -->
+
+        <div class="form-row">
+
+          <label for="message">
+            Your message *
+          </label>
+
+          <textarea
+            id="message"
+            name="message"
+            required
+          ></textarea>
+
+        </div>
+
+
+        <!-- ENSEMBLE -->
+
+        <fieldset
+          class="form-row"
+          style="
+            border: 0;
+            padding: 0;
+            margin-left: 0;
+            margin-right: 0;
+          "
+        >
+
+          <legend class="field-label">
+            Would you like a string quartet
+            (2 violins, viola, cello), trio
+            (violin, viola, cello), duo
+            (violin + cello), or solo
+            (violin or cello)?
+          </legend>
+
+
+          <div class="checkbox-list">
+
+            <label>
+              <input
+                type="checkbox"
+                name="ensemble[]"
+                value="Quartet"
+              >
+              Quartet
+            </label>
+
+
+            <label>
+              <input
+                type="checkbox"
+                name="ensemble[]"
+                value="Trio"
+              >
+              Trio
+            </label>
+
+
+            <label>
+              <input
+                type="checkbox"
+                name="ensemble[]"
+                value="Duo"
+              >
+              Duo
+            </label>
+
+
+            <label>
+              <input
+                type="checkbox"
+                name="ensemble[]"
+                value="Solo violin"
+              >
+              Solo violin
+            </label>
+
+
+            <label>
+              <input
+                type="checkbox"
+                name="ensemble[]"
+                value="Solo cello"
+              >
+              Solo cello
+            </label>
+
+
+            <label>
+              <input
+                type="checkbox"
+                name="ensemble[]"
+                value="Unsure"
+              >
+              Unsure / please advise
+            </label>
+
+          </div>
+
+        </fieldset>
+
+
+        <button
+          class="submit-button"
+          type="submit"
+        >
+          Submit
+        </button>
+
+
+      </form>
+
+    </div>
+
+  </div>
+</main>
+
+
+<footer class="site-footer">
+  <div class="site-shell">
+
+    <div class="footer-email">
+      Email us:
+      <a href="mailto:YOUR_EMAIL@example.com">
+        YOUR_EMAIL@example.com
+      </a>
+    </div>
+
+    <div class="footer-locations">
+      Santa Barbara | Montecito | Goleta | Carpinteria | Ojai |
+      Santa Ynez | Los Olivos
+    </div>
+
+    <div class="weebly-credit">
+      Powered by Create your own unique website with customizable templates.
+      <a href="https://www.weebly.com/" rel="nofollow">
+        Get Started
+      </a>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>

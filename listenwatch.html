@@ -31,7 +31,7 @@
     href="assets/images/favicon-32x32.png"
   >
 
-  <!-- Social sharing metadata -->
+  <!-- Social-sharing metadata -->
   <meta property="og:type" content="website">
   <meta
     property="og:title"
@@ -55,6 +55,26 @@
   >
 
   <link rel="stylesheet" href="style.css">
+
+  <!--
+    Places the performance description beneath the heading and makes it
+    large enough to function as an intentional introductory subheading.
+  -->
+  <style>
+    .performance-section .section-head {
+      display: block;
+      max-width: 900px;
+    }
+
+    .performance-section .section-head .section-copy {
+      max-width: 760px;
+      margin: 24px 0 0;
+      color: var(--ink-soft);
+      font-family: var(--serif);
+      font-size: clamp(1.35rem, 2vw, 1.7rem);
+      line-height: 1.4;
+    }
+  </style>
 </head>
 
 <body>
@@ -117,6 +137,7 @@
   </header>
 
   <main id="main">
+    <!-- Listen/Watch introduction -->
     <section class="page-hero">
       <div class="container page-hero-grid">
         <div>
@@ -153,12 +174,16 @@
       </div>
     </section>
 
-    <section class="section section--cream">
+    <!-- Performance videos -->
+    <section class="section section--cream performance-section">
       <div class="container">
         <div class="section-head">
           <div>
             <span class="eyebrow">Performance videos</span>
-            <h2>Classical polish. Contemporary personality.</h2>
+
+            <h2>
+              Classical polish. Contemporary personality.
+            </h2>
           </div>
 
           <p class="section-copy">
@@ -361,10 +386,12 @@
       </div>
     </section>
 
+    <!-- Final call to action -->
     <section class="site-cta">
       <div class="container site-cta-inner">
         <div>
           <h2>Already have a song in mind?</h2>
+
           <p>
             Send us your date, venue and musical ideas and we'll help build
             the soundtrack.
@@ -438,7 +465,9 @@
             </li>
 
             <li>
-              <a href="tel:+18055708956">(805) 570-8956</a>
+              <a href="tel:+18055708956">
+                (805) 570-8956
+              </a>
             </li>
 
             <li>

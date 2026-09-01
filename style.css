@@ -479,6 +479,12 @@ p {
   text-transform: uppercase;
 }
 
+.hero-proof-home {
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  gap: 18px 26px;
+}
+
 .hero-proof span {
   display: inline-flex;
   align-items: center;

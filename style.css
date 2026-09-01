@@ -479,10 +479,21 @@ p {
   text-transform: uppercase;
 }
 
+/* Homepage only — keep all three proof points on one line */
 .hero-proof-home {
-  flex-wrap: nowrap;
+  display: flex;
+  flex-wrap: nowrap !important;
+  gap: 12px 18px;
   white-space: nowrap;
-  gap: 18px 26px;
+  font-size: 0.72rem;
+  letter-spacing: 0.045em;
+  width: max-content;
+  max-width: none;
+}
+
+.hero-proof-home span {
+  flex: 0 0 auto;
+  white-space: nowrap;
 }
 
 .hero-proof span {

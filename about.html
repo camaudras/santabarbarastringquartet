@@ -3,63 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>About | Santa Barbara String Quartet</title>
-
-  <meta
-    name="description"
-    content="Meet the professional musicians of the Santa Barbara String Quartet and learn about our history serving Santa Barbara weddings and events since 1985."
-  >
-
-  <link
-    rel="canonical"
-    href="https://www.santabarbarastringquartet.com/about.html"
-  >
-
+  <meta name="description" content="Meet the professional musicians of the Santa Barbara String Quartet and learn about our history serving Santa Barbara weddings and events since 1985.">
+  <link rel="canonical" href="https://www.santabarbarastringquartet.com/about.html">
   <meta name="theme-color" content="#303a2d">
 
-  <!-- Browser favicon -->
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="32x32"
-    href="assets/images/favicon-32x32.png"
-  >
-  <link
-    rel="shortcut icon"
-    type="image/png"
-    href="assets/images/favicon-32x32.png"
-  >
+  <!-- Browser tab only: simple, readable 32×32 favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="shortcut icon" type="image/png" href="assets/images/favicon-32x32.png">
 
-  <!-- Social-sharing metadata -->
   <meta property="og:type" content="website">
-  <meta
-    property="og:title"
-    content="About | Santa Barbara String Quartet"
-  >
-  <meta
-    property="og:description"
-    content="Meet the professional musicians of the Santa Barbara String Quartet and learn about our history serving Santa Barbara weddings and events since 1985."
-  >
-  <meta
-    property="og:image"
-    content="https://www.santabarbarastringquartet.com/assets/images/quartet-performance.jpg"
-  >
+  <meta property="og:title" content="About | Santa Barbara String Quartet">
+  <meta property="og:description" content="Meet the professional musicians of the Santa Barbara String Quartet and learn about our history serving Santa Barbara weddings and events since 1985.">
+  <meta property="og:image" content="https://www.santabarbarastringquartet.com/assets/images/quartet-performance.jpg">
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
-
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
-  <!--
-    Makes this heading slightly smaller without changing headings elsewhere.
-    It stays on one line on wider screens and wraps normally on mobile.
-  -->
+  <!-- Keep the musicians heading balanced without changing headings sitewide. -->
   <style>
     .musicians-intro h2 {
       font-size: clamp(2.6rem, 4.15vw, 4.55rem);
@@ -74,390 +37,286 @@
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+<a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="announcement">
-    <div class="container">
-      Santa Barbara · Montecito · Ojai · Santa Ynez Valley · Ventura
-    </div>
+<div class="announcement">
+  <div class="container">Santa Barbara · Montecito · Ojai · Santa Ynez Valley · Ventura</div>
+</div>
+
+<header class="site-header">
+  <div class="container header-row">
+    <a class="brand" href="index.html" aria-label="Santa Barbara String Quartet home">
+      <img class="brand-logo" src="assets/images/logo-circle.png" alt="Santa Barbara String Quartet">
+      <span class="brand-name">Santa Barbara String Quartet</span>
+    </a>
+
+    <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Toggle menu">
+    <label class="nav-toggle-label" for="nav-toggle" aria-hidden="true"><span></span></label>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="listenwatch.html">Listen / Watch</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <a class="button header-cta" href="contact.html">Check your date</a>
   </div>
+</header>
 
-  <header class="site-header">
-    <div class="container header-row">
-      <a
-        class="brand"
-        href="index.html"
-        aria-label="Santa Barbara String Quartet home"
-      >
-        <img
-          class="brand-logo"
-          src="assets/images/logo-circle.png"
-          alt="Santa Barbara String Quartet"
-        >
-        <span class="brand-name">Santa Barbara String Quartet</span>
-      </a>
+<main id="main">
 
-      <input
-        class="nav-toggle"
-        type="checkbox"
-        id="nav-toggle"
-        aria-label="Toggle menu"
-      >
-
-      <label
-        class="nav-toggle-label"
-        for="nav-toggle"
-        aria-hidden="true"
-      >
-        <span></span>
-      </label>
-
-      <nav class="site-nav" aria-label="Primary navigation">
-        <ul>
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="about.html" aria-current="page">About</a>
-          </li>
-          <li>
-            <a href="listenwatch.html">Listen / Watch</a>
-          </li>
-          <li>
-            <a href="reviews.html">Reviews</a>
-          </li>
-          <li>
-            <a href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </nav>
-
-      <a class="button header-cta" href="contact.html">
-        Check your date
-      </a>
-    </div>
-  </header>
-
-  <main id="main">
-    <!-- About introduction -->
-    <section class="page-hero">
-      <div class="container page-hero-grid">
-        <div>
-          <span class="eyebrow">About the ensemble</span>
-
-          <h1>
-            World-class musicianship, with a
-            <em>Santa Barbara soul.</em>
-          </h1>
-
-          <p class="lede">
-            The Santa Barbara String Quartet has been providing live music
-            for thousands of couples since 1985.
-          </p>
-
-          <p class="section-copy">
-            Our extensive repertoire ranges from traditional wedding music
-            to contemporary covers. We can perform as a mini-orchestra,
-            quartet, trio, duo or solo instrumentalists, and we are happy
-            to fulfill special requests to create a tailored entertainment
-            experience.
-          </p>
-        </div>
-
-        <div class="page-hero-media">
-          <div class="image-frame">
-            <img
-              src="assets/images/quartet-performance.jpg"
-              alt="Santa Barbara String Quartet performing outdoors"
-            >
-          </div>
-
-          <div class="mini-image">
-            <img
-              class="fit-contain"
-              src="assets/images/candlelight-quartet.png"
-              alt="Santa Barbara String Quartet at a candlelight concert"
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Musicians introduction -->
-    <section class="section section--cream musicians-intro">
-      <div class="container center">
-        <span class="eyebrow">Our musicians</span>
-
-        <h2>
-          Concert-hall artistry. Wedding-day ease.
-        </h2>
+  <section class="page-hero">
+    <div class="container page-hero-grid">
+      <div>
+        <span class="eyebrow">About the ensemble</span>
+        <h1>World-class musicianship, with a <em>Santa Barbara soul.</em></h1>
 
         <p class="lede">
-          Our musicians bring decades of orchestral, chamber, teaching and
-          recording experience to every event.
+          The Santa Barbara String Quartet has been providing live music
+          for thousands of couples since 1985.
+        </p>
+
+        <p class="section-copy">
+          Our extensive repertoire ranges from traditional wedding music
+          to contemporary covers. We can perform as a mini-orchestra,
+          quartet, trio, duo or solo instrumentalists, and we are happy
+          to fulfill special requests to create a tailored entertainment experience.
         </p>
       </div>
-    </section>
 
-    <!-- Musician biographies -->
-    <section class="section">
-      <div class="container bio-list">
-        <!-- Emily Sommermann -->
-        <article class="bio-card">
-          <div class="bio-photo">
-            <img
-              src="assets/images/emily-sommermann.jpg"
-              alt="Emily Sommermann holding a violin"
-            >
-          </div>
-
-          <div class="bio-copy">
-            <div class="bio-role">Violin · Manager</div>
-
-            <h2>Emily Sommermann</h2>
-
-            <p>
-              Emily Sommermann is an accomplished violinist whose passion for
-              music resonates through her dynamic performances. Her musical
-              journey began in New York, where she received her foundational
-              training under esteemed instructors Alan Arnold, Nathan
-              Gottschalk, and Isidor Cohen of the Beaux Arts Trio. Emily
-              earned her Bachelor of Music degree from SUNY Albany and her
-              Master of Music degree from The University of NY at Stony Brook.
-            </p>
-
-            <p>
-              Emily's orchestral experience is extensive, having played in
-              the Chicago Youth Symphony, Albany Symphony Orchestra, Long
-              Island Symphony Orchestra, and Springfield (IL) Symphony
-              Orchestra. Summer festivals include the North Carolina School
-              of the Arts and Chautauqua Institution. In California, Emily
-              took on the role of assistant concertmaster of the Santa Barbara
-              Civic Light Opera Orchestra and as a section violinist with the
-              Santa Barbara Symphony and the Santa Barbara Chamber Orchestra.
-              She recently was seen playing with the Santa Barbara Chamber
-              Players and as concertmaster for the Santa Barbara Master
-              Chorale orchestra.
-            </p>
-
-            <p>
-              Emily leads the Santa Barbara String Quartet, a highly
-              sought-after ensemble that adds beauty and elegance to private
-              events. Currently, Emily is an Instructor of Violin and Chamber
-              Ensemble at Cate School and Westmont College and continues to
-              nurture students in her private studio. She enjoys cycling,
-              gardening, and traveling.
-            </p>
-          </div>
-        </article>
-
-        <!-- Anna Corcoran -->
-        <article class="bio-card">
-          <div class="bio-photo bio-photo--anna">
-            <img
-              src="assets/images/anna-corcoran.jpeg"
-              alt="Anna Corcoran playing violin"
-            >
-          </div>
-
-          <div class="bio-copy">
-            <div class="bio-role">Violin</div>
-
-            <h2>Anna Corcoran</h2>
-
-            <p>
-              Anna Corcoran holds a Bachelor's Degree in Music from the San
-              Francisco Conservatory of Music where she received the Sergei
-              Barsukov scholarship for four years of study under Axel Strauss
-              and Ian Swensen. She earned a Master's Degree from the University
-              of California, Los Angeles where she studied with Guillaume
-              Sutre and held the position of first violinist of the VEM String
-              Quartet that traveled as far as Yerevan, Armenia to perform
-              concerts for the public.
-            </p>
-
-            <p>
-              Anna currently performs with New West Symphony, Orchestra Santa
-              Monica, the Long Beach Symphony and Santa Barbara String Quartet
-              among other groups spanning Southern California. She teaches a
-              private studio at Craft Music where she focuses on creating
-              well-rounded musicians who are healthy and thriving in their
-              musical endeavors. Anna is dedicated to many genres of music
-              and enjoys fiddling and collaborating on new works for
-              performance and film.
-            </p>
-          </div>
-        </article>
-
-        <!-- Cam Audras -->
-        <article class="bio-card">
-          <div class="bio-photo">
-            <img
-              src="assets/images/cam-audras.jpg"
-              alt="Cam Audras holding a viola"
-            >
-          </div>
-
-          <div class="bio-copy">
-            <div class="bio-role">Viola</div>
-
-            <h2>Cam Audras</h2>
-
-            <p>
-              Polymathic at heart, Cam Audras believes musicians possess the
-              power to serve as advocates for social good. He has performed
-              with Pink Martini, the Santa Barbara Symphony, Opera Santa
-              Barbara, Santa Barbara Chamber Players, Santa Barbara String
-              Quartet, and the Santa Cruz Symphony.
-            </p>
-
-            <p>
-              Cam holds degrees in viola performance and environmental studies
-              from USC and master's degrees in viola performance and
-              environmental science and management from UC Santa Barbara. He
-              was named the USC Thornton School of Music's outstanding
-              undergraduate in strings and has appeared at festivals including
-              Bowdoin, Manchester Music Festival, Credo at Oberlin and Center
-              Stage Strings. Cam serves on the viola faculty at Westmont
-              College and maintains a private teaching studio.
-            </p>
-          </div>
-        </article>
-
-        <!-- Jacqueline Greenshields -->
-        <article class="bio-card">
-          <div class="bio-photo bio-photo--jackie">
-            <img
-              src="assets/images/jacqueline-greenshields.jpeg"
-              alt="Jacqueline Greenshields with cello"
-            >
-          </div>
-
-          <div class="bio-copy">
-            <div class="bio-role">Cello</div>
-
-            <h2>Jacqueline Greenshields</h2>
-
-            <p>
-              Jacqueline “Jackie” Greenshields has been part of Santa Barbara's
-              professional music community since the 1980s. She is a longtime
-              member of the Santa Barbara Symphony and previously served for
-              decades as principal cellist of the Santa Barbara Chamber
-              Orchestra. Her career has also included orchestral work in
-              Australia, European touring with The American Sinfonietta and
-              summers at the Music Academy of the West.
-            </p>
-
-            <p>
-              Jackie earned degrees from the University of Oklahoma and USC
-              and remains active as a chamber musician and teacher. She brings
-              an exceptional depth of ensemble experience to SBSQ, pairing the
-              warmth and foundation of the cello with the attentiveness and
-              flexibility that live event music demands.
-            </p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Final call to action -->
-    <section class="site-cta">
-      <div class="container site-cta-inner">
-        <div>
-          <h2>
-            Exceptional players. A celebration that feels effortless.
-          </h2>
-
-          <p>
-            Share your date and venue and we'll help you choose the ensemble
-            and music that best fits the day.
-          </p>
+      <div class="page-hero-media">
+        <div class="image-frame">
+          <img src="assets/images/quartet-performance.jpg" alt="Santa Barbara String Quartet performing outdoors">
         </div>
 
-        <a class="button button--light" href="contact.html">
-          Start an inquiry
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a
-            class="footer-logo-card"
-            href="index.html"
-            aria-label="Santa Barbara String Quartet home"
-          >
-            <img
-              class="footer-logo-original"
-              src="assets/images/logo-circle.png"
-              alt="Santa Barbara String Quartet logo"
-            >
-          </a>
-
-          <p>
-            Professional live string music for weddings, private events and
-            meaningful celebrations throughout Santa Barbara and the Central
-            Coast.
-          </p>
+        <div class="mini-image">
+          <img class="fit-contain" src="assets/images/candlelight-quartet.png" alt="Santa Barbara String Quartet at a candlelight concert">
         </div>
-
-        <div>
-          <div class="footer-title">Explore</div>
-
-          <ul class="footer-list">
-            <li><a href="about.html">About</a></li>
-            <li><a href="listenwatch.html">Listen / Watch</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <div class="footer-title">Serving</div>
-
-          <ul class="footer-list">
-            <li>Santa Barbara</li>
-            <li>Montecito</li>
-            <li>Goleta &amp; Carpinteria</li>
-            <li>Ojai</li>
-            <li>Santa Ynez &amp; Los Olivos</li>
-          </ul>
-        </div>
-
-        <div>
-          <div class="footer-title">Inquiries</div>
-
-          <ul class="footer-list">
-            <li>
-              <a
-                class="footer-email"
-                href="mailto:emily.sommermann@gmail.com"
-              >
-                emily.sommermann@gmail.com
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="https://www.instagram.com/santabarbarastringquartet/"
-                target="_blank"
-                rel="noopener"
-              >
-                Instagram @santabarbarastringquartet
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <span>© 2026 Santa Barbara String Quartet</span>
-        <span>Santa Barbara, California</span>
       </div>
     </div>
-  </footer>
+  </section>
+
+  <section class="section section--cream musicians-intro">
+    <div class="container center">
+      <span class="eyebrow">Our musicians</span>
+      <h2>Concert-hall artistry. Wedding-day ease.</h2>
+
+      <p class="lede">
+        Our musicians bring decades of orchestral, chamber, teaching and
+        recording experience to every event.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container bio-list">
+
+      <!-- Emily Sommermann -->
+      <article class="bio-card">
+        <div class="bio-photo">
+          <img src="assets/images/emily-sommermann.jpg" alt="Emily Sommermann holding a violin">
+        </div>
+
+        <div class="bio-copy">
+          <div class="bio-role">Violin · Manager</div>
+          <h2>Emily Sommermann</h2>
+
+          <p>
+            Emily Sommermann is an accomplished violinist whose passion for music resonates through her dynamic performances.
+            Her musical journey began in New York, where she received her foundational training under esteemed instructors
+            Alan Arnold, Nathan Gottschalk, and Isidor Cohen of the Beaux Arts Trio. Emily earned her Bachelor of Music degree
+            from SUNY Albany and her Master of Music degree from The University of NY at Stony Brook.
+          </p>
+
+          <p>
+            Emily's orchestral experience is extensive, having played in the Chicago Youth Symphony, Albany Symphony Orchestra,
+            Long Island Symphony Orchestra, and Springfield (IL) Symphony Orchestra. Summer festivals include the North Carolina
+            School of the Arts and Chautauqua Institution. In California, Emily took on the role of assistant concertmaster of the
+            Santa Barbara Civic Light Opera Orchestra and as a section violinist with the Santa Barbara Symphony and the Santa Barbara
+            Chamber Orchestra. She recently was seen playing with the Santa Barbara Chamber Players and as concertmaster for the
+            Santa Barbara Master Chorale orchestra.
+          </p>
+
+          <p>
+            Emily leads the Santa Barbara String Quartet, a highly sought-after ensemble that adds beauty and elegance to private events.
+            Currently, Emily is an Instructor of Violin and Chamber Ensemble at Cate School and Westmont College and continues to nurture
+            students in her private studio. She enjoys cycling, gardening, and traveling.
+          </p>
+        </div>
+      </article>
+
+      <!-- Anna Corcoran -->
+      <article class="bio-card">
+        <div class="bio-photo bio-photo--anna">
+          <img src="assets/images/anna-corcoran.jpeg" alt="Anna Corcoran playing violin">
+        </div>
+
+        <div class="bio-copy">
+          <div class="bio-role">Violin</div>
+          <h2>Anna Corcoran</h2>
+
+          <p>
+            Anna Corcoran holds a Bachelor's Degree in Music from the San Francisco Conservatory of Music where she received the
+            Sergei Barsukov scholarship for four years of study under Axel Strauss and Ian Swensen. She earned a Master's Degree from
+            the University of California, Los Angeles where she studied with Guillaume Sutre and held the position of first violinist
+            of the VEM String Quartet that traveled as far as Yerevan, Armenia to perform concerts for the public.
+          </p>
+
+          <p>
+            Anna currently performs with New West Symphony, Orchestra Santa Monica, the Long Beach Symphony and Santa Barbara String Quartet
+            among other groups spanning Southern California. She teaches a private studio at Craft Music where she focuses on creating
+            well-rounded musicians who are healthy and thriving in their musical endeavors. Anna is dedicated to many genres of music
+            and enjoys fiddling and collaborating on new works for performance and film.
+          </p>
+        </div>
+      </article>
+
+      <!-- Cam Audras -->
+      <article class="bio-card">
+        <div class="bio-photo">
+          <img src="assets/images/cam-audras.jpg" alt="Cam Audras holding a viola">
+        </div>
+
+        <div class="bio-copy">
+          <div class="bio-role">Viola</div>
+          <h2>Cam Audras</h2>
+
+          <p>
+            Polymathic at heart, Cam Audras believes musicians possess the power to serve as advocates for social good.
+            He has performed with Pink Martini, the Santa Barbara Symphony, Opera Santa Barbara, Santa Barbara Chamber Players,
+            Santa Barbara String Quartet, and the Santa Cruz Symphony.
+          </p>
+
+          <p>
+            Cam holds degrees in viola performance and environmental studies from USC and master's degrees in viola performance
+            and environmental science and management from UC Santa Barbara. He was named the USC Thornton School of Music's
+            outstanding undergraduate in strings and has appeared at festivals including Bowdoin, Manchester Music Festival,
+            Credo at Oberlin and Center Stage Strings. Cam serves on the viola faculty at Westmont College and maintains a private
+            teaching studio.
+          </p>
+        </div>
+      </article>
+
+      <!-- Katrina Agate -->
+      <article class="bio-card">
+        <div class="bio-photo">
+          <img src="assets/images/KatrinaPortrait.jpg" alt="Katrina Agate performing on cello">
+        </div>
+
+        <div class="bio-copy">
+          <div class="bio-role">Cello</div>
+          <h2>Katrina Agate</h2>
+
+          <p>
+            Katrina Agate began studying the cello at the age of nine and has since worked with distinguished teachers including
+            Clive Greensmith, Jacob Braun, and Jennifer Kloetzel. She has participated in masterclasses with renowned artists such
+            as Yo-Yo Ma, Steven Isserlis, Alban Gerhardt, and Carter Brey, and attended the Music Academy in 2015, where she studied
+            with David Geber and Alan Stepansky.
+          </p>
+
+          <p>
+            Katrina earned undergraduate degrees in Electrical Engineering and Music, with an emphasis in Cello Performance,
+            from the University of California, Santa Barbara, where she was recognized with the UC Regents Scholarship,
+            the Martin Kamen Fellowship for Strings, and the Outstanding Graduating Senior Award in Music. Her achievements also
+            include first place in the senior instrumental category of the PASF Scholarship Competition and a full scholarship
+            to perform at the KotorArts Music Festival in Montenegro, representing Santa Barbara.
+          </p>
+
+          <p>
+            She went on to earn a master’s degree in Electrical Engineering from the University of California, San Diego, in 2021,
+            and continues to balance her career as an engineer with an active performing career. Her notable appearances include
+            Carnegie Hall, performances with Coldplay at the Hollywood Palladium and the iHeartRadio Music Festival, and recording
+            with the band on <em>Coldplay: Reimagined</em>.
+          </p>
+
+          <p>
+            Katrina is also a proponent of new music, most recently performing as part of BROILER, Oracle Egg’s residency series
+            supporting the development of ambitious new work in sound and performance, in Los Angeles. In her free time, Katrina
+            enjoys reading, tinkering with engineering projects, and baking sweet treats.
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="site-cta">
+    <div class="container site-cta-inner">
+      <div>
+        <h2>Exceptional players. A celebration that feels effortless.</h2>
+        <p>Share your date and venue and we'll help you choose the ensemble and music that best fits the day.</p>
+      </div>
+
+      <a class="button button--light" href="contact.html">Start an inquiry</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <a class="footer-logo-card" href="index.html" aria-label="Santa Barbara String Quartet home">
+          <img class="footer-logo-original" src="assets/images/logo-sbsq.png" alt="Santa Barbara String Quartet logo">
+        </a>
+
+        <p>
+          Professional live string music for weddings, private events and
+          meaningful celebrations throughout Santa Barbara and the Central Coast.
+        </p>
+      </div>
+
+      <div>
+        <div class="footer-title">Explore</div>
+        <ul class="footer-list">
+          <li><a href="about.html">About</a></li>
+          <li><a href="listenwatch.html">Listen / Watch</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-title">Serving</div>
+        <ul class="footer-list">
+          <li>Santa Barbara</li>
+          <li>Montecito</li>
+          <li>Goleta & Carpinteria</li>
+          <li>Ojai</li>
+          <li>Santa Ynez & Los Olivos</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-title">Inquiries</div>
+        <ul class="footer-list">
+          <li>
+            <a class="footer-email" href="mailto:emily.sommermann@gmail.com">
+              emily.sommermann@gmail.com
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/santabarbarastringquartet/" target="_blank" rel="noopener">
+              Instagram @santabarbarastringquartet
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Santa Barbara String Quartet</span>
+      <span>Santa Barbara, California</span>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>

@@ -479,23 +479,6 @@ p {
   text-transform: uppercase;
 }
 
-/* Homepage only — keep all three proof points on one line */
-.hero-proof-home {
-  display: flex;
-  flex-wrap: nowrap !important;
-  gap: 12px 18px;
-  white-space: nowrap;
-  font-size: 0.72rem;
-  letter-spacing: 0.045em;
-  width: max-content;
-  max-width: none;
-}
-
-.hero-proof-home span {
-  flex: 0 0 auto;
-  white-space: nowrap;
-}
-
 .hero-proof span {
   display: inline-flex;
   align-items: center;
@@ -527,34 +510,6 @@ p {
   height: 100%;
   object-fit: contain;
   object-position: center;
-}
-
-.hero-seal {
-  position: absolute;
-  right: -18px;
-  bottom: 24px;
-  display: grid;
-  place-items: center;
-  width: 132px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: var(--olive-dark);
-  color: white;
-  text-align: center;
-  font-family: var(--serif);
-  font-size: 1.15rem;
-  line-height: 1.05;
-  box-shadow: var(--shadow-soft);
-}
-
-.hero-seal small {
-  display: block;
-  margin-top: 4px;
-  font-family: var(--sans);
-  font-size: 0.58rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
 }
 
 /* ============================================================
@@ -643,6 +598,25 @@ p {
 /* ============================================================
    ENSEMBLE CARDS WITH PHOTOS
    ============================================================ */
+
+/*
+  Keep the ensemble introduction and the card grid in separate full-width
+  rows. These rules prevent the cards from being squeezed beside the heading
+  if another layout rule is inherited or cached by the browser.
+*/
+.ensemble-section > .container {
+  display: block !important;
+}
+
+.ensemble-section .section-head,
+.ensemble-section .card-grid {
+  width: 100%;
+  min-width: 0;
+}
+
+.ensemble-section .card-grid {
+  clear: both;
+}
 
 .card-grid {
   display: grid;
@@ -1497,6 +1471,21 @@ p {
 
   .header-row {
     min-height: 86px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 12px;
+  }
+
+  .brand {
+    min-width: 0;
+    gap: 10px;
+  }
+
+  .brand-name {
+    display: block;
+    max-width: 180px;
+    font-size: 1.08rem;
+    line-height: 1.05;
+    white-space: normal;
   }
 
   .brand-logo {
@@ -1626,8 +1615,23 @@ p {
     font-size: clamp(2.55rem, 14vw, 4rem);
   }
 
+  .header-row {
+    min-height: 78px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 10px;
+  }
+
+  .brand {
+    min-width: 0;
+    gap: 8px;
+  }
+
   .brand-name {
-    display: none;
+    display: block;
+    max-width: 150px;
+    font-size: 0.98rem;
+    line-height: 1.03;
+    white-space: normal;
   }
 
   .brand-logo {
@@ -1641,11 +1645,6 @@ p {
 
   .hero-photo-main {
     border-radius: 100px 100px 22px 22px;
-  }
-
-  .hero-seal {
-    width: 106px;
-    right: -3px;
   }
 
   .proof-grid,

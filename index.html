@@ -74,6 +74,29 @@
     .ensemble-section .card-grid {
       clear: both;
     }
+
+    /*
+      Homepage hero:
+      make the image taller and give the right side
+      slightly more width on desktop.
+    */
+    @media (min-width: 821px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+        gap: 50px;
+      }
+
+      .hero-media {
+        min-height: 720px;
+      }
+
+      .hero-photo-main img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
   </style>
 </head>
 

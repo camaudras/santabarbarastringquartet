@@ -8,7 +8,6 @@
   <link rel="canonical" href="https://www.santabarbarastringquartet.com/contact.html">
   <meta name="theme-color" content="#303a2d">
 
-  <!-- Browser tab only: simple, readable 32×32 favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
   <link rel="shortcut icon" type="image/png" href="assets/images/favicon-32x32.png">
 
@@ -22,6 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
@@ -31,8 +31,7 @@
 
 <header class="site-header">
   <div class="container header-row">
-    <a class="brand" href="index.html" aria-label="Santa Barbara String Quartet home">
-      <!-- Visible page logo: ornate circular mark, separate from favicon -->
+    <a class="brand" href="./" aria-label="Santa Barbara String Quartet home">
       <img class="brand-logo" src="assets/images/logo-circle.png" alt="Santa Barbara String Quartet">
       <span class="brand-name">Santa Barbara String Quartet</span>
     </a>
@@ -42,7 +41,7 @@
 
     <nav class="site-nav" aria-label="Primary navigation">
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="./">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="listenwatch.html">Listen / Watch</a></li>
         <li><a href="reviews.html">Reviews</a></li>
@@ -59,18 +58,28 @@
     <div class="container page-hero-grid">
       <div>
         <span class="eyebrow">Start your inquiry</span>
-        <h1>Let's create the <em>soundtrack to your day.</em></h1>
-        <p class="lede">Use the form below to contact us about performing for your special event.</p>
+
+        <h1>
+          Let's create the
+          <em>soundtrack to your day.</em>
+        </h1>
+
+        <p class="lede">
+          Use the form below to contact us about performing for your special event.
+        </p>
+
         <p class="section-copy">
           Providing as much information about your event as possible
           will help us give you the most accurate quote.
         </p>
       </div>
 
-      <!-- Same quartet image as the homepage hero. No lower-left inset. -->
       <div class="page-hero-media page-hero-media--single">
         <div class="image-frame">
-          <img src="assets/images/quartet-vineyard.jpg" alt="Santa Barbara String Quartet at a vineyard wedding">
+          <img
+            src="assets/images/quartet-vineyard.jpg"
+            alt="Santa Barbara String Quartet at a vineyard wedding"
+          >
         </div>
       </div>
     </div>
@@ -80,7 +89,11 @@
     <div class="container contact-layout">
       <aside class="contact-side">
         <span class="eyebrow">We're excited to hear from you</span>
-        <h2>Tell us the essentials. We'll take it from there.</h2>
+
+        <h2>
+          Tell us the essentials. We'll take it from there.
+        </h2>
+
         <p class="section-copy">
           To request a proposal, send your name, event date, location and
           ensemble preference. If you are comparing more than one ensemble size,
@@ -88,72 +101,202 @@
         </p>
 
         <ul class="contact-details">
-          <li><strong>Email</strong><a class="footer-email" href="mailto:emily.sommermann@gmail.com">emily.sommermann@gmail.com</a></li>
-          <li><strong>Ensembles</strong>Quartet · Trio · Duo · Solo violin or cello</li>
-          <li><strong>Service area</strong>Santa Barbara · Montecito · Goleta · Carpinteria · Ojai · Santa Ynez · Los Olivos</li>
+          <li>
+            <strong>Email</strong>
+            <a
+              class="footer-email"
+              href="mailto:emily.sommermann@gmail.com"
+            >
+              emily.sommermann@gmail.com
+            </a>
+          </li>
+
+          <li>
+            <strong>Phone</strong>
+            <a href="tel:+18055708956">(805) 570-8956</a>
+          </li>
+
+          <li>
+            <strong>Ensembles</strong>
+            Quartet · Trio · Duo · Solo violin or cello
+          </li>
+
+          <li>
+            <strong>Service area</strong>
+            Santa Barbara · Montecito · Goleta · Carpinteria · Ojai · Santa Ynez · Los Olivos
+          </li>
         </ul>
       </aside>
 
       <div class="contact-card">
         <h3>Request availability & pricing</h3>
+
         <p class="form-intro">
           Fields marked * are required. Share as much detail as you have.
         </p>
 
-        <!-- Replace YOUR_FORMSPREE_ID before launch. -->
-        <form action="https://formspree.io/f/mjykvlbw" method="POST">
-          <input type="hidden" name="_subject" value="New Santa Barbara String Quartet inquiry">
+        <form
+          action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+          method="POST"
+        >
+          <input
+            type="hidden"
+            name="_subject"
+            value="New Santa Barbara String Quartet inquiry"
+          >
 
           <div class="honeypot" aria-hidden="true">
-            <label>Leave this field empty <input type="text" name="company_website" tabindex="-1" autocomplete="off"></label>
+            <label>
+              Leave this field empty
+              <input
+                type="text"
+                name="company_website"
+                tabindex="-1"
+                autocomplete="off"
+              >
+            </label>
           </div>
 
           <div class="form-grid">
             <div class="form-field">
               <label for="first-name">First name *</label>
-              <input id="first-name" name="first_name" type="text" autocomplete="given-name" required>
+
+              <input
+                id="first-name"
+                name="first_name"
+                type="text"
+                autocomplete="given-name"
+                required
+              >
             </div>
 
             <div class="form-field">
               <label for="last-name">Last name *</label>
-              <input id="last-name" name="last_name" type="text" autocomplete="family-name" required>
+
+              <input
+                id="last-name"
+                name="last_name"
+                type="text"
+                autocomplete="family-name"
+                required
+              >
             </div>
 
             <div class="form-field form-field--full">
               <label for="email">Email *</label>
-              <input id="email" name="email" type="email" autocomplete="email" required>
+
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+              >
             </div>
 
             <div class="form-field">
               <label for="event-date">Event date & time *</label>
-              <input id="event-date" name="event_date_time" type="text" placeholder="e.g. May 16, 2027 · 4:30 PM" required>
+
+              <input
+                id="event-date"
+                name="event_date_time"
+                type="text"
+                placeholder="e.g. May 16, 2027 · 4:30 PM"
+                required
+              >
             </div>
 
             <div class="form-field">
               <label for="venue">Venue / location *</label>
-              <input id="venue" name="venue_location" type="text" placeholder="Venue name or address" required>
+
+              <input
+                id="venue"
+                name="venue_location"
+                type="text"
+                placeholder="Venue name or address"
+                required
+              >
             </div>
 
-            <fieldset class="form-field form-field--full" style="border:0;padding:0;margin:0;">
+            <fieldset
+              class="form-field form-field--full"
+              style="border:0;padding:0;margin:0;"
+            >
               <legend>Ensemble preference</legend>
+
               <div class="checkbox-grid">
-                <label class="check-option"><input type="checkbox" name="ensemble[]" value="Quartet">Quartet — 2 violins, viola, cello</label>
-                <label class="check-option"><input type="checkbox" name="ensemble[]" value="Trio">Trio — violin, viola, cello</label>
-                <label class="check-option"><input type="checkbox" name="ensemble[]" value="Duo">Duo — violin, cello</label>
-                <label class="check-option"><input type="checkbox" name="ensemble[]" value="Solo violin">Solo violin</label>
-                <label class="check-option"><input type="checkbox" name="ensemble[]" value="Solo cello">Solo cello</label>
-                <label class="check-option"><input type="checkbox" name="ensemble[]" value="Unsure">Unsure / please advise</label>
+                <label class="check-option">
+                  <input
+                    type="checkbox"
+                    name="ensemble[]"
+                    value="Quartet"
+                  >
+                  Quartet — 2 violins, viola, cello
+                </label>
+
+                <label class="check-option">
+                  <input
+                    type="checkbox"
+                    name="ensemble[]"
+                    value="Trio"
+                  >
+                  Trio — violin, viola, cello
+                </label>
+
+                <label class="check-option">
+                  <input
+                    type="checkbox"
+                    name="ensemble[]"
+                    value="Duo"
+                  >
+                  Duo — violin, cello
+                </label>
+
+                <label class="check-option">
+                  <input
+                    type="checkbox"
+                    name="ensemble[]"
+                    value="Solo violin"
+                  >
+                  Solo violin
+                </label>
+
+                <label class="check-option">
+                  <input
+                    type="checkbox"
+                    name="ensemble[]"
+                    value="Solo cello"
+                  >
+                  Solo cello
+                </label>
+
+                <label class="check-option">
+                  <input
+                    type="checkbox"
+                    name="ensemble[]"
+                    value="Unsure"
+                  >
+                  Unsure / please advise
+                </label>
               </div>
             </fieldset>
 
             <div class="form-field form-field--full">
               <label for="message">Your message *</label>
-              <textarea id="message" name="message" placeholder="Tell us about your ceremony, cocktail hour or event, musical ideas, and anything else we should know." required></textarea>
+
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tell us about your ceremony, cocktail hour or event, musical ideas, and anything else we should know."
+                required
+              ></textarea>
             </div>
           </div>
 
           <div class="button-row">
-            <button class="button" type="submit">Send inquiry</button>
+            <button class="button" type="submit">
+              Send inquiry
+            </button>
           </div>
         </form>
       </div>
@@ -165,13 +308,16 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <!--
-          Original rectangular detailed SBSQ logo.
-          Keep this file as assets/images/logo-circle.png.
-          CSS blend mode makes its pale/white field match #fffdf8.
-        -->
-        <a class="footer-logo-card" href="index.html" aria-label="Santa Barbara String Quartet home">
-          <img class="footer-logo-original" src="assets/images/logo-circle.png" alt="Santa Barbara String Quartet logo">
+        <a
+          class="footer-logo-card"
+          href="./"
+          aria-label="Santa Barbara String Quartet home"
+        >
+          <img
+            class="footer-logo-original"
+            src="assets/images/logo-sbsq.png"
+            alt="Santa Barbara String Quartet logo"
+          >
         </a>
 
         <p>
@@ -182,6 +328,7 @@
 
       <div>
         <div class="footer-title">Explore</div>
+
         <ul class="footer-list">
           <li><a href="about.html">About</a></li>
           <li><a href="listenwatch.html">Listen / Watch</a></li>
@@ -192,6 +339,7 @@
 
       <div>
         <div class="footer-title">Serving</div>
+
         <ul class="footer-list">
           <li>Santa Barbara</li>
           <li>Montecito</li>
@@ -203,9 +351,26 @@
 
       <div>
         <div class="footer-title">Inquiries</div>
+
         <ul class="footer-list">
-          <li><a class="footer-email" href="mailto:emily.sommermann@gmail.com">emily.sommermann@gmail.com</a></li>
-          <li><a href="https://www.instagram.com/santabarbarastringquartet/" target="_blank" rel="noopener">Instagram @santabarbarastringquartet</a></li>
+          <li>
+            <a
+              class="footer-email"
+              href="mailto:emily.sommermann@gmail.com"
+            >
+              emily.sommermann@gmail.com
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://www.instagram.com/santabarbarastringquartet/"
+              target="_blank"
+              rel="noopener"
+            >
+              Instagram @santabarbarastringquartet
+            </a>
+          </li>
         </ul>
       </div>
     </div>

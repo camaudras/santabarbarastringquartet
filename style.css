@@ -248,6 +248,7 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 14px;
+  min-width: 0;
 }
 
 /* Transparent circular SBSQ logo. */
@@ -595,11 +596,6 @@ p {
    ENSEMBLE CARDS WITH PHOTOS
    ============================================================ */
 
-/*
-  Keep the ensemble introduction and the card grid in separate full-width
-  rows. These rules prevent the cards from being squeezed beside the heading
-  if another layout rule is inherited or cached by the browser.
-*/
 .ensemble-section > .container {
   display: block !important;
 }
@@ -822,7 +818,7 @@ p {
 }
 
 /* ============================================================
-   GALLERY — special contain classes prevent cropped heads/members
+   GALLERY
    ============================================================ */
 
 .gallery-grid {
@@ -918,7 +914,6 @@ p {
   object-position: center;
 }
 
-/* Contact hero: one large quartet photo, no inset. */
 .page-hero-media--single .image-frame {
   inset: 0;
 }
@@ -928,7 +923,6 @@ p {
   object-position: center;
 }
 
-/* Reviews: show every musician; do not aggressively crop either image. */
 .page-hero-media--reviews .image-frame img,
 .page-hero-media--reviews .mini-image img {
   object-fit: contain;
@@ -955,7 +949,6 @@ p {
   align-items: center;
 }
 
-/* Every musician photo now occupies exactly the same visual footprint. */
 .bio-photo {
   width: min(100%, 430px);
   aspect-ratio: 4 / 5;
@@ -973,10 +966,6 @@ p {
   object-position: center;
 }
 
-/*
-  Anna + Jackie: show the complete source image so heads/instruments are not cut.
-  This intentionally trades a small amount of empty space for complete framing.
-*/
 .bio-photo--anna img,
 .bio-photo--jackie img {
   object-fit: contain;
@@ -1012,7 +1001,7 @@ p {
 }
 
 /* ============================================================
-   LISTEN / WATCH — TWO-COLUMN VIDEO GRID
+   LISTEN / WATCH
    ============================================================ */
 
 .video-list {
@@ -1355,11 +1344,6 @@ p {
   background: var(--paper);
 }
 
-/*
-  Original rectangular SBSQ artwork.
-  Multiply makes the original white/light background visually inherit
-  the exact #fffdf8 website off-white while preserving dark/gold artwork.
-*/
 .footer-logo-original {
   width: 100%;
   height: auto;
@@ -1423,10 +1407,6 @@ p {
     height: 74px;
   }
 
-  .brand-name {
-    display: none;
-  }
-
   .site-nav ul {
     gap: 20px;
   }
@@ -1466,12 +1446,28 @@ p {
   }
 
   .header-row {
-    min-height: 86px;
+    min-height: 82px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 14px;
+  }
+
+  .brand {
+    min-width: 0;
+    gap: 10px;
   }
 
   .brand-logo {
-    width: 68px;
-    height: 68px;
+    width: 62px;
+    height: 62px;
+    flex-shrink: 0;
+  }
+
+  .brand-name {
+    display: block;
+    min-width: 0;
+    font-size: 1.05rem;
+    line-height: 1.05;
+    white-space: normal;
   }
 
   .header-cta {
@@ -1596,13 +1592,26 @@ p {
     font-size: clamp(2.55rem, 14vw, 4rem);
   }
 
-  .brand-name {
-    display: none;
+  .header-row {
+    min-height: 76px;
+    gap: 10px;
+  }
+
+  .brand {
+    gap: 9px;
   }
 
   .brand-logo {
-    width: 60px;
-    height: 60px;
+    width: 56px;
+    height: 56px;
+  }
+
+  .brand-name {
+    display: block;
+    min-width: 0;
+    font-size: 0.95rem;
+    line-height: 1.05;
+    white-space: normal;
   }
 
   .hero-media {

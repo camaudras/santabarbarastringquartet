@@ -250,17 +250,18 @@ p {
   gap: 14px;
 }
 
+/* Transparent circular SBSQ logo. */
 .brand-logo {
   display: block;
-  width: 92px;
+  width: 82px;
   height: 82px;
   object-fit: contain;
   object-position: center;
   flex-shrink: 0;
-  background: var(--paper);
+  background: transparent;
   border: 0;
+  border-radius: 50%;
   box-shadow: none;
-  clip-path: inset(0 0 3px 0);
 }
 
 .brand-name {
@@ -490,6 +491,7 @@ p {
   min-height: 610px;
 }
 
+/* Single large group photo: no inset image. */
 .hero-photo-main {
   position: absolute;
   inset: 0;
@@ -593,6 +595,11 @@ p {
    ENSEMBLE CARDS WITH PHOTOS
    ============================================================ */
 
+/*
+  Keep the ensemble introduction and the card grid in separate full-width
+  rows. These rules prevent the cards from being squeezed beside the heading
+  if another layout rule is inherited or cached by the browser.
+*/
 .ensemble-section > .container {
   display: block !important;
 }
@@ -815,7 +822,7 @@ p {
 }
 
 /* ============================================================
-   GALLERY
+   GALLERY — special contain classes prevent cropped heads/members
    ============================================================ */
 
 .gallery-grid {
@@ -911,6 +918,7 @@ p {
   object-position: center;
 }
 
+/* Contact hero: one large quartet photo, no inset. */
 .page-hero-media--single .image-frame {
   inset: 0;
 }
@@ -920,6 +928,7 @@ p {
   object-position: center;
 }
 
+/* Reviews: show every musician; do not aggressively crop either image. */
 .page-hero-media--reviews .image-frame img,
 .page-hero-media--reviews .mini-image img {
   object-fit: contain;
@@ -946,6 +955,7 @@ p {
   align-items: center;
 }
 
+/* Every musician photo now occupies exactly the same visual footprint. */
 .bio-photo {
   width: min(100%, 430px);
   aspect-ratio: 4 / 5;
@@ -963,7 +973,12 @@ p {
   object-position: center;
 }
 
-.bio-photo--anna img {
+/*
+  Anna + Jackie: show the complete source image so heads/instruments are not cut.
+  This intentionally trades a small amount of empty space for complete framing.
+*/
+.bio-photo--anna img,
+.bio-photo--jackie img {
   object-fit: contain;
   object-position: center;
   padding: 4px;
@@ -997,7 +1012,7 @@ p {
 }
 
 /* ============================================================
-   LISTEN / WATCH
+   LISTEN / WATCH — TWO-COLUMN VIDEO GRID
    ============================================================ */
 
 .video-list {
@@ -1340,6 +1355,11 @@ p {
   background: var(--paper);
 }
 
+/*
+  Original rectangular SBSQ artwork.
+  Multiply makes the original white/light background visually inherit
+  the exact #fffdf8 website off-white while preserving dark/gold artwork.
+*/
 .footer-logo-original {
   width: 100%;
   height: auto;
@@ -1399,7 +1419,7 @@ p {
 
 @media (max-width: 1080px) {
   .brand-logo {
-    width: 82px;
+    width: 74px;
     height: 74px;
   }
 
@@ -1447,26 +1467,11 @@ p {
 
   .header-row {
     min-height: 86px;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 12px;
-  }
-
-  .brand {
-    min-width: 0;
-    gap: 10px;
-  }
-
-  .brand-name {
-    display: block;
-    max-width: none;
-    font-size: clamp(0.95rem, 2.5vw, 1.08rem);
-    line-height: 1;
-    white-space: nowrap;
   }
 
   .brand-logo {
-    width: 74px;
-    height: 66px;
+    width: 68px;
+    height: 68px;
   }
 
   .header-cta {
@@ -1591,33 +1596,13 @@ p {
     font-size: clamp(2.55rem, 14vw, 4rem);
   }
 
-  .header-row {
-    min-height: 76px;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 6px;
-  }
-
-  .brand {
-    min-width: 0;
-    gap: 6px;
-  }
-
   .brand-name {
-    display: block;
-    max-width: none;
-    font-size: clamp(0.95rem, 4vw, 1rem);
-    line-height: 1;
-    white-space: nowrap;
+    display: none;
   }
 
   .brand-logo {
-    width: 58px;
-    height: 54px;
-  }
-
-  .nav-toggle-label {
-    width: 36px;
-    height: 36px;
+    width: 60px;
+    height: 60px;
   }
 
   .hero-media {

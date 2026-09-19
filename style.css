@@ -2374,3 +2374,207 @@ p {
     margin-top: 7px;
   }
 }
+/* ============================================================
+   FINAL MOBILE STICKY HEADER
+   Keep this at the VERY END of style.css
+   ============================================================ */
+
+@media (max-width: 820px) {
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .header-row {
+    min-height: 64px !important;
+    padding: 4px 0 !important;
+
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto auto !important;
+    grid-template-rows: auto !important;
+
+    align-items: center !important;
+    column-gap: 7px !important;
+    row-gap: 0 !important;
+  }
+
+  /* Logo + full SBSQ name */
+  .brand {
+    grid-column: 1;
+    grid-row: 1;
+
+    display: flex !important;
+    align-items: center !important;
+
+    min-width: 0;
+    gap: 6px !important;
+  }
+
+  .brand-logo {
+    width: 38px !important;
+    height: 38px !important;
+    flex: 0 0 38px !important;
+
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .brand-name {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    max-width: 135px;
+
+    font-family: var(--serif);
+    font-size: 0.98rem !important;
+    font-weight: 600;
+    line-height: 0.9 !important;
+    letter-spacing: -0.025em;
+
+    white-space: normal !important;
+  }
+
+  /* Get a quote */
+  .header-cta {
+    display: inline-flex !important;
+
+    grid-column: 2;
+    grid-row: 1;
+
+    min-height: 36px !important;
+    padding: 7px 10px !important;
+
+    font-size: 0.56rem !important;
+    line-height: 1 !important;
+    letter-spacing: 0.045em !important;
+
+    white-space: nowrap;
+  }
+
+  /* Hamburger */
+  .nav-toggle-label {
+    display: grid !important;
+
+    grid-column: 3;
+    grid-row: 1;
+
+    justify-self: end;
+
+    width: 30px !important;
+    height: 36px !important;
+
+    place-content: center;
+    gap: 5px;
+  }
+
+  .nav-toggle-label span,
+  .nav-toggle-label::before,
+  .nav-toggle-label::after {
+    content: "";
+    display: block;
+
+    width: 18px !important;
+    height: 1px;
+
+    background: var(--ink);
+  }
+
+  /*
+    Menu occupies NO vertical space while closed.
+    This is what removes the extra blank area below the header.
+  */
+  .site-nav {
+    display: none !important;
+
+    grid-column: 1 / -1;
+    grid-row: 2;
+
+    width: 100%;
+    padding: 6px 0 12px;
+  }
+
+  .nav-toggle:checked ~ .site-nav {
+    display: block !important;
+  }
+
+  .site-nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .site-nav a {
+    display: block;
+    padding: 10px 0;
+  }
+
+  .site-nav a::after {
+    display: none;
+  }
+
+
+  /* Contact page: there is no Get a quote button */
+  .header-row:not(:has(.header-cta)) {
+    grid-template-columns: minmax(0, 1fr) auto !important;
+  }
+
+  .header-row:not(:has(.header-cta)) .nav-toggle-label {
+    grid-column: 2;
+  }
+
+  .header-row:not(:has(.header-cta)) .brand-name {
+    max-width: 180px;
+    font-size: 1.03rem !important;
+  }
+}
+
+
+/* Extra-tight phones */
+@media (max-width: 400px) {
+
+  .header-row {
+    min-height: 60px !important;
+    column-gap: 5px !important;
+  }
+
+  .brand {
+    gap: 5px !important;
+  }
+
+  .brand-logo {
+    width: 34px !important;
+    height: 34px !important;
+    flex-basis: 34px !important;
+  }
+
+  .brand-name {
+    max-width: 118px;
+    font-size: 0.9rem !important;
+    line-height: 0.9 !important;
+  }
+
+  .header-cta {
+    min-height: 34px !important;
+    padding: 6px 9px !important;
+    font-size: 0.53rem !important;
+  }
+
+  .nav-toggle-label {
+    width: 27px !important;
+    height: 34px !important;
+  }
+
+  .nav-toggle-label span,
+  .nav-toggle-label::before,
+  .nav-toggle-label::after {
+    width: 17px !important;
+  }
+
+  .header-row:not(:has(.header-cta)) .brand-name {
+    max-width: 165px;
+    font-size: 0.98rem !important;
+  }
+}

@@ -18,20 +18,19 @@
 
   <meta name="theme-color" content="#303a2d">
 
-  <!-- Browser favicon -->
   <link
     rel="icon"
     type="image/png"
     sizes="32x32"
     href="assets/images/favicon-32x32.png"
   >
+
   <link
     rel="shortcut icon"
     type="image/png"
     href="assets/images/favicon-32x32.png"
   >
 
-  <!-- Social-sharing metadata -->
   <meta property="og:type" content="website">
 
   <meta
@@ -49,7 +48,6 @@
     content="https://www.santabarbarastringquartet.com/assets/images/quartet-vineyard.jpg"
   >
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -149,6 +147,7 @@
       border-radius: 18px;
       position: relative;
       transform: none !important;
+      background: #fffdf8;
     }
 
     .gallery-grid .gallery-item img {
@@ -159,15 +158,6 @@
       padding: 0;
       object-fit: cover;
     }
-
-    /*
-      Continuous scrapbook grid.
-
-      Rows 1–6 = original gallery.
-      Rows 7–11 = Katrina + oak ceremony.
-
-      Both new images begin IMMEDIATELY after row 6.
-    */
 
     .gallery-item--1 {
       grid-column: 1 / 6;
@@ -204,7 +194,6 @@
       grid-row: 5 / 7;
     }
 
-    /* New images start directly at grid line 7 */
     .gallery-item--8 {
       grid-column: 1 / 5;
       grid-row: 7 / 12;
@@ -216,12 +205,18 @@
     }
 
     /*
-      Crop positioning.
-      Keep musicians' faces and important subjects visible.
+      These two ensemble photos need their full horizontal field
+      visible so players are not cropped off at the sides.
     */
 
     .gallery-item--1 img {
-      object-position: center 38%;
+      object-fit: contain;
+      object-position: center center;
+    }
+
+    .gallery-item--5 img {
+      object-fit: contain;
+      object-position: center center;
     }
 
     .gallery-item--2 img {
@@ -234,10 +229,6 @@
 
     .gallery-item--4 img {
       object-position: center 38%;
-    }
-
-    .gallery-item--5 img {
-      object-position: center 35%;
     }
 
     .gallery-item--6 img {
@@ -255,11 +246,6 @@
     .gallery-item--9 img {
       object-position: center center;
     }
-
-    /*
-      Tablet/mobile:
-      natural-image masonry so portraits and faces are not cropped.
-    */
 
     @media (max-width: 900px) {
       .gallery-grid {
@@ -344,35 +330,11 @@
 
       <nav class="site-nav" aria-label="Primary navigation">
         <ul>
-          <li>
-            <a href="index.html" aria-current="page">
-              Home
-            </a>
-          </li>
-
-          <li>
-            <a href="about.html">
-              About
-            </a>
-          </li>
-
-          <li>
-            <a href="listenwatch.html">
-              Listen / Watch
-            </a>
-          </li>
-
-          <li>
-            <a href="reviews.html">
-              Reviews
-            </a>
-          </li>
-
-          <li>
-            <a href="contact.html">
-              Contact
-            </a>
-          </li>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="listenwatch.html">Listen / Watch</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
 
@@ -385,9 +347,7 @@
 
   <main id="main">
 
-    <!-- =====================================================
-         HERO
-         ===================================================== -->
+    <!-- HERO -->
 
     <section class="hero">
       <div class="container hero-grid">
@@ -439,61 +399,37 @@
       </div>
     </section>
 
-    <!-- =====================================================
-         PROOF STRIP
-         ===================================================== -->
+    <!-- PROOF STRIP -->
 
     <section class="proof-strip">
 
       <div class="container proof-grid">
 
         <div class="proof-item">
-          <span class="proof-number">
-            1985
-          </span>
-
-          <span class="proof-label">
-            Established
-          </span>
+          <span class="proof-number">1985</span>
+          <span class="proof-label">Established</span>
         </div>
 
         <div class="proof-item">
-          <span class="proof-number">
-            1000+
-          </span>
-
-          <span class="proof-label">
-            Couples served
-          </span>
+          <span class="proof-number">1000+</span>
+          <span class="proof-label">Couples served</span>
         </div>
 
         <div class="proof-item">
-          <span class="proof-number">
-            5.0
-          </span>
-
-          <span class="proof-label">
-            Weddingwire rating
-          </span>
+          <span class="proof-number">5.0</span>
+          <span class="proof-label">Weddingwire rating</span>
         </div>
 
         <div class="proof-item">
-          <span class="proof-number">
-            100%
-          </span>
-
-          <span class="proof-label">
-            Recommended
-          </span>
+          <span class="proof-number">100%</span>
+          <span class="proof-label">Recommended</span>
         </div>
 
       </div>
 
     </section>
 
-    <!-- =====================================================
-         INTRODUCTION
-         ===================================================== -->
+    <!-- INTRODUCTION -->
 
     <section class="section">
 
@@ -542,9 +478,7 @@
 
     </section>
 
-    <!-- =====================================================
-         ENSEMBLE OPTIONS
-         ===================================================== -->
+    <!-- ENSEMBLE OPTIONS -->
 
     <section class="section section--cream ensemble-section">
 
@@ -587,13 +521,9 @@
 
             <div class="ensemble-card-body">
 
-              <span class="number">
-                04
-              </span>
+              <span class="number">04</span>
 
-              <h3>
-                String Quartet
-              </h3>
+              <h3>String Quartet</h3>
 
               <p>
                 Two violins, viola and cello. Our richest and most cinematic sound.
@@ -621,13 +551,9 @@
 
             <div class="ensemble-card-body">
 
-              <span class="number">
-                03
-              </span>
+              <span class="number">03</span>
 
-              <h3>
-                String Trio
-              </h3>
+              <h3>String Trio</h3>
 
               <p>
                 Violin, viola and cello. A warm, full texture with a lighter footprint.
@@ -655,13 +581,9 @@
 
             <div class="ensemble-card-body">
 
-              <span class="number">
-                02
-              </span>
+              <span class="number">02</span>
 
-              <h3>
-                String Duo
-              </h3>
+              <h3>String Duo</h3>
 
               <p>
                 Violin and cello. Elegant and flexible for smaller ceremonies and
@@ -690,13 +612,9 @@
 
             <div class="ensemble-card-body">
 
-              <span class="number">
-                01
-              </span>
+              <span class="number">01</span>
 
-              <h3>
-                Soloist
-              </h3>
+              <h3>Soloist</h3>
 
               <p>
                 Solo violin or cello for elopements, proposals, cocktail hours and
@@ -717,9 +635,7 @@
 
     </section>
 
-    <!-- =====================================================
-         EVENT FLOW
-         ===================================================== -->
+    <!-- EVENT FLOW -->
 
     <section class="section">
 
@@ -743,27 +659,18 @@
           <ol class="timeline">
 
             <li>
-              <strong>
-                Guest arrival
-              </strong>
-
+              <strong>Guest arrival</strong>
               Set the atmosphere with welcoming prelude music.
             </li>
 
             <li>
-              <strong>
-                Ceremony
-              </strong>
-
+              <strong>Ceremony</strong>
               Processional, bridal entrance, interludes and recessional,
               timed to the day.
             </li>
 
             <li>
-              <strong>
-                Cocktail hour &amp; beyond
-              </strong>
-
+              <strong>Cocktail hour &amp; beyond</strong>
               Classical favorites, pop covers, jazz, rock and more.
             </li>
 
@@ -785,9 +692,7 @@
 
     </section>
 
-    <!-- =====================================================
-         TESTIMONIAL
-         ===================================================== -->
+    <!-- TESTIMONIAL -->
 
     <section class="quote-band">
 
@@ -810,9 +715,7 @@
 
     </section>
 
-    <!-- =====================================================
-         LOCAL EXPERIENCE
-         ===================================================== -->
+    <!-- LOCAL EXPERIENCE -->
 
     <section class="section section--cream">
 
@@ -875,9 +778,7 @@
 
     </section>
 
-    <!-- =====================================================
-         GALLERY
-         ===================================================== -->
+    <!-- GALLERY -->
 
     <section class="section">
 
@@ -1001,9 +902,7 @@
 
     </section>
 
-    <!-- =====================================================
-         FINAL CTA
-         ===================================================== -->
+    <!-- FINAL CTA -->
 
     <section class="site-cta">
 
@@ -1030,10 +929,6 @@
     </section>
 
   </main>
-
-  <!-- =======================================================
-       FOOTER
-       ======================================================= -->
 
   <footer class="site-footer">
 
@@ -1108,25 +1003,11 @@
 
           <ul class="footer-list">
 
-            <li>
-              Santa Barbara
-            </li>
-
-            <li>
-              Montecito
-            </li>
-
-            <li>
-              Goleta &amp; Carpinteria
-            </li>
-
-            <li>
-              Ojai
-            </li>
-
-            <li>
-              Santa Ynez &amp; Los Olivos
-            </li>
+            <li>Santa Barbara</li>
+            <li>Montecito</li>
+            <li>Goleta &amp; Carpinteria</li>
+            <li>Ojai</li>
+            <li>Santa Ynez &amp; Los Olivos</li>
 
           </ul>
 

@@ -18,7 +18,6 @@
 
   <meta name="theme-color" content="#303a2d">
 
-  <!-- Browser favicon -->
   <link
     rel="icon"
     type="image/png"
@@ -31,7 +30,6 @@
     href="assets/images/favicon-32x32.png"
   >
 
-  <!-- Social-sharing metadata -->
   <meta property="og:type" content="website">
   <meta
     property="og:title"
@@ -46,7 +44,6 @@
     content="https://www.santabarbarastringquartet.com/assets/images/quartet-vineyard.jpg"
   >
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -115,49 +112,19 @@
       }
     }
 
-    /* =========================================================
-       HOMEPAGE SCRAPBOOK GALLERY
-       ========================================================= */
-
+    /* Unified scrapbook gallery */
     .gallery-grid {
-      display: flex !important;
-      flex-direction: column;
-      gap: 14px !important;
-      width: 100%;
-      margin: 0 !important;
-      padding: 0 !important;
-    }
-
-    /*
-      The original seven-image scrapbook remains one large,
-      tightly packed composition.
-    */
-    .gallery-top,
-    .gallery-bottom {
       display: grid;
       grid-template-columns: repeat(12, minmax(0, 1fr));
+      grid-auto-rows: 68px;
       gap: 14px;
       width: 100%;
       margin: 0;
       padding: 0;
     }
 
-    .gallery-top {
-      grid-template-rows: repeat(6, minmax(0, 1fr));
-      aspect-ratio: 12 / 7.25;
-    }
-
-    /*
-      The two new images sit immediately beneath the original
-      collage and use the full gallery width.
-    */
-    .gallery-bottom {
-      grid-template-rows: 1fr;
-      aspect-ratio: 12 / 5.2;
-    }
-
     .gallery-grid .gallery-item {
-      margin: 0 !important;
+      margin: 0;
       min-width: 0;
       min-height: 0;
       overflow: hidden;
@@ -166,18 +133,16 @@
     }
 
     .gallery-grid .gallery-item img {
-      display: block;
       width: 100%;
       height: 100%;
+      display: block;
       object-fit: cover;
     }
 
-    /*
-      Original seven-image layout.
-    */
+    /* Desktop scrapbook layout */
     .gallery-item--1 {
       grid-column: 1 / 6;
-      grid-row: 1 / 5;
+      grid-row: 1 / 6;
     }
 
     .gallery-item--2 {
@@ -191,88 +156,91 @@
     }
 
     .gallery-item--4 {
-      grid-column: 6 / 9;
-      grid-row: 3 / 5;
+      grid-column: 6 / 10;
+      grid-row: 3 / 6;
     }
 
-    /*
-      Slightly wider than before so the quartet has more
-      horizontal breathing room and edge players stay visible.
-    */
     .gallery-item--5 {
-      grid-column: 9 / 13;
-      grid-row: 3 / 7;
+      grid-column: 10 / 13;
+      grid-row: 3 / 8;
     }
 
     .gallery-item--6 {
-      grid-column: 1 / 6;
-      grid-row: 5 / 7;
+      grid-column: 1 / 7;
+      grid-row: 6 / 8;
     }
 
     .gallery-item--7 {
-      grid-column: 6 / 9;
-      grid-row: 5 / 7;
+      grid-column: 7 / 10;
+      grid-row: 6 / 8;
     }
 
-    /*
-      New images.
-    */
     .gallery-item--8 {
       grid-column: 1 / 5;
+      grid-row: 8 / 12;
     }
 
     .gallery-item--9 {
       grid-column: 5 / 13;
+      grid-row: 8 / 12;
     }
 
-    /*
-      Crop adjustments.
-      Keep the ensemble centered without chopping off the
-      musicians at the edges.
-    */
+    /* Crop tuning */
     .gallery-item--1 img {
-      object-position: 42% center;
+      object-position: 45% center;
+    }
+
+    .gallery-item--2 img {
+      object-position: center center;
+    }
+
+    .gallery-item--3 img {
+      object-position: center center;
+    }
+
+    .gallery-item--4 img {
+      object-position: center 35%;
     }
 
     .gallery-item--5 img {
-      object-position: 50% center;
+      object-position: center center;
     }
 
-    .gallery-item--2 img,
-    .gallery-item--3 img,
-    .gallery-item--4 img,
-    .gallery-item--6 img,
-    .gallery-item--7 img,
-    .gallery-item--8 img,
+    .gallery-item--6 img {
+      object-position: center 35%;
+    }
+
+    .gallery-item--7 img {
+      object-position: center center;
+    }
+
+    .gallery-item--8 img {
+      object-position: center center;
+    }
+
     .gallery-item--9 img {
       object-position: center center;
     }
 
-    /*
-      On tablets and phones, stop forcing scrapbook crops
-      and allow the photographs to retain their natural proportions.
-    */
+    /* On tablet/mobile, switch to masonry-style layout so there is never a giant gap */
     @media (max-width: 900px) {
       .gallery-grid {
-        gap: 12px !important;
-      }
-
-      .gallery-top,
-      .gallery-bottom {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: none;
-        aspect-ratio: auto;
-        gap: 12px;
+        display: block;
+        columns: 2;
+        column-gap: 14px;
       }
 
       .gallery-grid .gallery-item {
-        grid-column: auto !important;
-        grid-row: auto !important;
-        aspect-ratio: auto;
+        display: inline-block;
+        width: 100%;
+        margin: 0 0 14px;
+        break-inside: avoid;
+        -webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
       }
 
       .gallery-grid .gallery-item img {
+        width: 100%;
         height: auto;
         object-fit: contain;
         object-position: center;
@@ -280,9 +248,8 @@
     }
 
     @media (max-width: 600px) {
-      .gallery-top,
-      .gallery-bottom {
-        grid-template-columns: 1fr;
+      .gallery-grid {
+        columns: 1;
       }
     }
   </style>
@@ -713,85 +680,77 @@
 
         <div class="gallery-grid">
 
-          <div class="gallery-top">
+          <figure class="gallery-item gallery-item--1">
+            <img
+              src="assets/images/quartet-wedding.jpg"
+              alt="Santa Barbara String Quartet performing at a wedding"
+              loading="lazy"
+            >
+          </figure>
 
-            <figure class="gallery-item gallery-item--1">
-              <img
-                src="assets/images/quartet-wedding.jpg"
-                alt="Santa Barbara String Quartet performing at a wedding"
-                loading="lazy"
-              >
-            </figure>
+          <figure class="gallery-item gallery-item--2">
+            <img
+              src="assets/images/quartet-ojai.jpg"
+              alt="Santa Barbara String Quartet performing in Ojai"
+              loading="lazy"
+            >
+          </figure>
 
-            <figure class="gallery-item gallery-item--2">
-              <img
-                src="assets/images/quartet-ojai.jpg"
-                alt="Santa Barbara String Quartet performing in Ojai"
-                loading="lazy"
-              >
-            </figure>
+          <figure class="gallery-item gallery-item--3">
+            <img
+              src="assets/images/coral-casino-ocean.jpg"
+              alt="Oceanfront wedding at the Coral Casino in Santa Barbara"
+              loading="lazy"
+            >
+          </figure>
 
-            <figure class="gallery-item gallery-item--3">
-              <img
-                src="assets/images/coral-casino-ocean.jpg"
-                alt="Oceanfront wedding at the Coral Casino in Santa Barbara"
-                loading="lazy"
-              >
-            </figure>
+          <figure class="gallery-item gallery-item--4">
+            <img
+              src="assets/images/trio-event.jpg"
+              alt="Santa Barbara string trio performing at an event"
+              loading="lazy"
+            >
+          </figure>
 
-            <figure class="gallery-item gallery-item--4">
-              <img
-                src="assets/images/trio-event.jpg"
-                alt="Santa Barbara string trio performing at an event"
-                loading="lazy"
-              >
-            </figure>
+          <figure class="gallery-item gallery-item--5">
+            <img
+              src="assets/images/coral-casino-quartet.jpg"
+              alt="Santa Barbara String Quartet performing at the Coral Casino"
+              loading="lazy"
+            >
+          </figure>
 
-            <figure class="gallery-item gallery-item--5">
-              <img
-                src="assets/images/coral-casino-quartet.jpg"
-                alt="Santa Barbara String Quartet performing at the Coral Casino"
-                loading="lazy"
-              >
-            </figure>
+          <figure class="gallery-item gallery-item--6">
+            <img
+              src="assets/images/musicians-alpaca.jpg"
+              alt="Santa Barbara String Quartet musicians"
+              loading="lazy"
+            >
+          </figure>
 
-            <figure class="gallery-item gallery-item--6">
-              <img
-                src="assets/images/musicians-alpaca.jpg"
-                alt="Santa Barbara String Quartet musicians"
-                loading="lazy"
-              >
-            </figure>
+          <figure class="gallery-item gallery-item--7">
+            <img
+              src="assets/images/candlelight-quartet.png"
+              alt="Santa Barbara String Quartet after a candlelight concert"
+              loading="lazy"
+            >
+          </figure>
 
-            <figure class="gallery-item gallery-item--7">
-              <img
-                src="assets/images/candlelight-quartet.png"
-                alt="Santa Barbara String Quartet after a candlelight concert"
-                loading="lazy"
-              >
-            </figure>
+          <figure class="gallery-item gallery-item--8">
+            <img
+              src="assets/images/katrina-cello.jpg"
+              alt="Cellist performing with the Santa Barbara String Quartet"
+              loading="lazy"
+            >
+          </figure>
 
-          </div>
-
-          <div class="gallery-bottom">
-
-            <figure class="gallery-item gallery-item--8">
-              <img
-                src="assets/images/katrina-cello.jpg"
-                alt="Cellist performing with the Santa Barbara String Quartet"
-                loading="lazy"
-              >
-            </figure>
-
-            <figure class="gallery-item gallery-item--9">
-              <img
-                src="assets/images/sbsq-oaks.jpg"
-                alt="Wedding ceremony beneath oak trees in Santa Barbara wine country"
-                loading="lazy"
-              >
-            </figure>
-
-          </div>
+          <figure class="gallery-item gallery-item--9">
+            <img
+              src="assets/images/sbsq-oaks.jpg"
+              alt="Wedding ceremony beneath oak trees in Santa Barbara wine country"
+              loading="lazy"
+            >
+          </figure>
 
         </div>
       </div>
@@ -837,8 +796,7 @@
           </a>
 
           <p>
-            Professional live string music for weddings and private events throughout Santa Barbara and the Central
-            Coast.
+            Professional live string music for weddings and private events throughout Santa Barbara and the Central Coast.
           </p>
         </div>
 

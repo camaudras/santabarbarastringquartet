@@ -33,14 +33,17 @@
 
   <!-- Social-sharing metadata -->
   <meta property="og:type" content="website">
+
   <meta
     property="og:title"
     content="Santa Barbara String Quartet | Wedding String Quartet & Live Music"
   >
+
   <meta
     property="og:description"
     content="Elegant live string music for Santa Barbara weddings and private events. Quartet, trio, duo and solo musicians serving Santa Barbara, Montecito, Ojai and the Santa Ynez Valley."
   >
+
   <meta
     property="og:image"
     content="https://www.santabarbarastringquartet.com/assets/images/quartet-vineyard.jpg"
@@ -49,6 +52,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap"
     rel="stylesheet"
@@ -71,7 +75,10 @@
       clear: both;
     }
 
-    /* Larger, more dramatic homepage hero */
+    /* =========================================================
+       HERO
+       ========================================================= */
+
     .hero .hero-grid {
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       gap: clamp(2rem, 4vw, 4.75rem);
@@ -115,46 +122,130 @@
       }
     }
 
-    /* Scrapbook-style homepage gallery: tight layout with no empty columns */
+    /* =========================================================
+       SCRAPBOOK GALLERY
+       ========================================================= */
+
     .gallery-grid {
-      display: grid;
+      display: grid !important;
       grid-template-columns: repeat(12, minmax(0, 1fr));
-      grid-auto-rows: 118px;
-      gap: 14px;
+      grid-template-rows: repeat(11, 118px);
+      gap: 14px !important;
+      width: 100%;
+      margin: 0 !important;
+      padding: 0 !important;
       align-items: stretch;
+      grid-auto-flow: dense;
     }
 
     .gallery-grid .gallery-item {
-      margin: 0;
+      display: block;
       min-width: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0 !important;
+      padding: 0 !important;
       overflow: hidden;
       border-radius: 18px;
+      position: relative;
+      transform: none !important;
     }
 
     .gallery-grid .gallery-item img {
+      display: block;
       width: 100%;
       height: 100%;
-      display: block;
+      margin: 0;
+      padding: 0;
       object-fit: cover;
     }
 
-    .gallery-item--1 { grid-column: 1 / 6;  grid-row: 1 / 5; }
-    .gallery-item--2 { grid-column: 6 / 8;  grid-row: 1 / 3; }
-    .gallery-item--3 { grid-column: 8 / 13; grid-row: 1 / 3; }
-    .gallery-item--4 { grid-column: 6 / 10; grid-row: 3 / 5; }
-    .gallery-item--5 { grid-column: 10 / 13; grid-row: 3 / 7; }
-    .gallery-item--6 { grid-column: 1 / 6;  grid-row: 5 / 7; }
-    .gallery-item--7 { grid-column: 6 / 10; grid-row: 5 / 7; }
-    .gallery-item--8 { grid-column: 1 / 5;  grid-row: 7 / 12; }
-    .gallery-item--9 { grid-column: 5 / 13; grid-row: 7 / 12; }
+    /*
+      Continuous scrapbook grid.
 
-    /* Keep faces/people toward the visible portion of cropped frames. */
-    .gallery-item--1 img,
-    .gallery-item--4 img,
-    .gallery-item--5 img,
-    .gallery-item--6 img,
-    .gallery-item--7 img {
+      Rows 1–6 = original gallery.
+      Rows 7–11 = Katrina + oak ceremony.
+
+      Both new images begin IMMEDIATELY after row 6.
+    */
+
+    .gallery-item--1 {
+      grid-column: 1 / 6;
+      grid-row: 1 / 5;
+    }
+
+    .gallery-item--2 {
+      grid-column: 6 / 8;
+      grid-row: 1 / 3;
+    }
+
+    .gallery-item--3 {
+      grid-column: 8 / 13;
+      grid-row: 1 / 3;
+    }
+
+    .gallery-item--4 {
+      grid-column: 6 / 10;
+      grid-row: 3 / 5;
+    }
+
+    .gallery-item--5 {
+      grid-column: 10 / 13;
+      grid-row: 3 / 7;
+    }
+
+    .gallery-item--6 {
+      grid-column: 1 / 6;
+      grid-row: 5 / 7;
+    }
+
+    .gallery-item--7 {
+      grid-column: 6 / 10;
+      grid-row: 5 / 7;
+    }
+
+    /* New images start directly at grid line 7 */
+    .gallery-item--8 {
+      grid-column: 1 / 5;
+      grid-row: 7 / 12;
+    }
+
+    .gallery-item--9 {
+      grid-column: 5 / 13;
+      grid-row: 7 / 12;
+    }
+
+    /*
+      Crop positioning.
+      Keep musicians' faces and important subjects visible.
+    */
+
+    .gallery-item--1 img {
+      object-position: center 38%;
+    }
+
+    .gallery-item--2 img {
+      object-position: center center;
+    }
+
+    .gallery-item--3 img {
+      object-position: center center;
+    }
+
+    .gallery-item--4 img {
+      object-position: center 38%;
+    }
+
+    .gallery-item--5 img {
       object-position: center 35%;
+    }
+
+    .gallery-item--6 img {
+      object-position: center 35%;
+    }
+
+    .gallery-item--7 img {
+      object-position: center 40%;
     }
 
     .gallery-item--8 img {
@@ -165,19 +256,28 @@
       object-position: center center;
     }
 
-    /* Preserve full photos and a masonry feel on narrower screens. */
+    /*
+      Tablet/mobile:
+      natural-image masonry so portraits and faces are not cropped.
+    */
+
     @media (max-width: 900px) {
       .gallery-grid {
-        display: block;
+        display: block !important;
         columns: 2;
         column-gap: 14px;
+        width: 100%;
+        margin: 0 !important;
       }
 
       .gallery-grid .gallery-item {
         display: inline-block;
         width: 100%;
-        margin: 0 0 14px;
+        height: auto;
+        margin: 0 0 14px !important;
         break-inside: avoid;
+        -webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
       }
 
       .gallery-grid .gallery-item img {
@@ -197,7 +297,10 @@
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+
+  <a class="skip-link" href="#main">
+    Skip to content
+  </a>
 
   <div class="announcement">
     <div class="container">
@@ -205,62 +308,95 @@
     </div>
   </div>
 
-<header class="site-header">
-  <div class="container header-row">
+  <header class="site-header">
+    <div class="container header-row">
 
-    <a
-      class="brand"
-      href="index.html"
-      aria-label="Santa Barbara String Quartet home"
-    >
-      <img
-        class="brand-logo"
-        src="assets/images/logo-circle.png"
-        alt="Santa Barbara String Quartet"
+      <a
+        class="brand"
+        href="index.html"
+        aria-label="Santa Barbara String Quartet home"
       >
-      <span class="brand-name">Santa Barbara String Quartet</span>
-    </a>
+        <img
+          class="brand-logo"
+          src="assets/images/logo-circle.png"
+          alt="Santa Barbara String Quartet"
+        >
 
-    <input
-      class="nav-toggle"
-      type="checkbox"
-      id="nav-toggle"
-      aria-label="Toggle menu"
-    >
+        <span class="brand-name">
+          Santa Barbara String Quartet
+        </span>
+      </a>
 
-    <label
-      class="nav-toggle-label"
-      for="nav-toggle"
-      aria-hidden="true"
-    >
-      <span></span>
-    </label>
+      <input
+        class="nav-toggle"
+        type="checkbox"
+        id="nav-toggle"
+        aria-label="Toggle menu"
+      >
 
-    <nav class="site-nav" aria-label="Primary navigation">
-      <ul>
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="listenwatch.html">Listen / Watch</a></li>
-        <li><a href="reviews.html">Reviews</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+      <label
+        class="nav-toggle-label"
+        for="nav-toggle"
+        aria-hidden="true"
+      >
+        <span></span>
+      </label>
 
-    <a class="button header-cta" href="contact.html">
-      Get a quote
-    </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul>
+          <li>
+            <a href="index.html" aria-current="page">
+              Home
+            </a>
+          </li>
 
-  </div>
-</header>
+          <li>
+            <a href="about.html">
+              About
+            </a>
+          </li>
+
+          <li>
+            <a href="listenwatch.html">
+              Listen / Watch
+            </a>
+          </li>
+
+          <li>
+            <a href="reviews.html">
+              Reviews
+            </a>
+          </li>
+
+          <li>
+            <a href="contact.html">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <a class="button header-cta" href="contact.html">
+        Get a quote
+      </a>
+
+    </div>
+  </header>
 
   <main id="main">
 
-    <!-- Hero -->
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
     <section class="hero">
       <div class="container hero-grid">
 
         <div class="hero-copy">
-          <span class="eyebrow">Wedding &amp; event musicians</span>
+
+          <span class="eyebrow">
+            Wedding &amp; event musicians
+          </span>
 
           <h1>
             Live strings for the moments you'll
@@ -268,12 +404,13 @@
           </h1>
 
           <p class="lede">
-            Santa Barbara's premier string ensemble for weddings and private
-            events. From timeless classics to modern favorites, we create
-            beautifully tailored live music for your celebration.
+            Santa Barbara's premier string ensemble for weddings and private events.
+            From timeless classics to modern favorites, we create beautifully
+            tailored live music for your celebration.
           </p>
 
           <div class="button-row">
+
             <a class="button" href="contact.html">
               Check your date
             </a>
@@ -281,276 +418,409 @@
             <a class="button button--ghost" href="listenwatch.html">
               Listen &amp; watch
             </a>
+
           </div>
+
         </div>
 
         <div class="hero-media">
+
           <div class="hero-photo-main">
+
             <img
               src="assets/images/quartet-performance.jpg"
               alt="Santa Barbara String Quartet performing at a vineyard wedding"
             >
+
           </div>
+
         </div>
 
       </div>
     </section>
 
-    <!-- Proof strip -->
+    <!-- =====================================================
+         PROOF STRIP
+         ===================================================== -->
+
     <section class="proof-strip">
+
       <div class="container proof-grid">
 
         <div class="proof-item">
-          <span class="proof-number">1985</span>
-          <span class="proof-label">Established</span>
+          <span class="proof-number">
+            1985
+          </span>
+
+          <span class="proof-label">
+            Established
+          </span>
         </div>
 
         <div class="proof-item">
-          <span class="proof-number">1000+</span>
-          <span class="proof-label">Couples served</span>
+          <span class="proof-number">
+            1000+
+          </span>
+
+          <span class="proof-label">
+            Couples served
+          </span>
         </div>
 
         <div class="proof-item">
-          <span class="proof-number">5.0</span>
-          <span class="proof-label">Weddingwire rating</span>
+          <span class="proof-number">
+            5.0
+          </span>
+
+          <span class="proof-label">
+            Weddingwire rating
+          </span>
         </div>
 
         <div class="proof-item">
-          <span class="proof-number">100%</span>
-          <span class="proof-label">Recommended</span>
+          <span class="proof-number">
+            100%
+          </span>
+
+          <span class="proof-label">
+            Recommended
+          </span>
         </div>
 
       </div>
+
     </section>
 
-    <!-- Introduction -->
+    <!-- =====================================================
+         INTRODUCTION
+         ===================================================== -->
+
     <section class="section">
+
       <div class="container split">
 
         <div class="image-frame image-frame--arch">
+
           <img
             src="assets/images/quartet-vineyard.jpg"
             alt="Santa Barbara String Quartet performing outdoors"
             loading="lazy"
           >
+
         </div>
 
         <div class="story-copy">
-          <span class="eyebrow">A Santa Barbara original</span>
+
+          <span class="eyebrow">
+            A Santa Barbara original
+          </span>
 
           <h2>
             Beautiful music. Calm preparation. A ceremony that feels like you.
           </h2>
 
           <p class="section-copy">
-            The Santa Barbara String Quartet has provided live music for
-            thousands of couples since 1985. Our repertoire spans traditional
-            wedding music, classical favorites and contemporary covers, and we
-            are happy to fulfill special requests so your music feels personal
-            to your celebration.
+            The Santa Barbara String Quartet has provided live music for thousands
+            of couples since 1985. Our repertoire spans traditional wedding music,
+            classical favorites and contemporary covers, and we are happy to fulfill
+            special requests so your music feels personal to your celebration.
           </p>
 
           <p class="section-copy">
-            Choose the full quartet or a more intimate trio, duo or soloist.
-            We can shape the ensemble around your venue, guest count, musical
-            vision and the atmosphere you want to create.
+            Choose the full quartet or a more intimate trio, duo or soloist. We can
+            shape the ensemble around your venue, guest count, musical vision and
+            the atmosphere you want to create.
           </p>
 
           <a class="text-link" href="about.html">
             Meet the musicians
           </a>
+
         </div>
 
       </div>
+
     </section>
 
-    <!-- Ensemble options -->
+    <!-- =====================================================
+         ENSEMBLE OPTIONS
+         ===================================================== -->
+
     <section class="section section--cream ensemble-section">
+
       <div class="container">
 
         <div class="section-head">
+
           <div>
-            <span class="eyebrow">Choose your sound</span>
+
+            <span class="eyebrow">
+              Choose your sound
+            </span>
 
             <h2>
               An ensemble for every kind of celebration.
             </h2>
+
           </div>
 
           <p class="section-copy">
             Choose from quartet, trio, duo or solo music based on your venue,
             guest count and the atmosphere you want to create.
           </p>
+
         </div>
 
         <div class="card-grid">
 
           <article class="ensemble-card">
+
             <div class="ensemble-card-photo">
+
               <img
                 src="assets/images/quartet-vineyard.jpg"
                 alt="Santa Barbara String Quartet"
                 loading="lazy"
               >
+
             </div>
 
             <div class="ensemble-card-body">
-              <span class="number">04</span>
-              <h3>String Quartet</h3>
+
+              <span class="number">
+                04
+              </span>
+
+              <h3>
+                String Quartet
+              </h3>
 
               <p>
-                Two violins, viola and cello. Our richest and most cinematic
-                sound.
+                Two violins, viola and cello. Our richest and most cinematic sound.
               </p>
 
               <a class="text-link" href="contact.html">
                 Request a quote
               </a>
+
             </div>
+
           </article>
 
           <article class="ensemble-card">
+
             <div class="ensemble-card-photo">
+
               <img
                 src="assets/images/trio-event.jpg"
                 alt="Santa Barbara string trio"
                 loading="lazy"
               >
+
             </div>
 
             <div class="ensemble-card-body">
-              <span class="number">03</span>
-              <h3>String Trio</h3>
+
+              <span class="number">
+                03
+              </span>
+
+              <h3>
+                String Trio
+              </h3>
 
               <p>
-                Violin, viola and cello. A warm, full texture with a lighter
-                footprint.
+                Violin, viola and cello. A warm, full texture with a lighter footprint.
               </p>
 
               <a class="text-link" href="contact.html">
                 Request a quote
               </a>
+
             </div>
+
           </article>
 
           <article class="ensemble-card">
+
             <div class="ensemble-card-photo">
+
               <img
                 src="assets/images/duo-outdoors.png"
                 alt="Santa Barbara string duo"
                 loading="lazy"
               >
+
             </div>
 
             <div class="ensemble-card-body">
-              <span class="number">02</span>
-              <h3>String Duo</h3>
+
+              <span class="number">
+                02
+              </span>
+
+              <h3>
+                String Duo
+              </h3>
 
               <p>
-                Violin and cello. Elegant and flexible for smaller ceremonies
-                and events.
+                Violin and cello. Elegant and flexible for smaller ceremonies and
+                events.
               </p>
 
               <a class="text-link" href="contact.html">
                 Request a quote
               </a>
+
             </div>
+
           </article>
 
           <article class="ensemble-card">
+
             <div class="ensemble-card-photo ensemble-card-photo--solo">
+
               <img
                 src="assets/images/emily-sommermann.jpg"
                 alt="Emily Sommermann playing violin"
                 loading="lazy"
               >
+
             </div>
 
             <div class="ensemble-card-body">
-              <span class="number">01</span>
-              <h3>Soloist</h3>
+
+              <span class="number">
+                01
+              </span>
+
+              <h3>
+                Soloist
+              </h3>
 
               <p>
-                Solo violin or cello for elopements, proposals, cocktail hours
-                and intimate events.
+                Solo violin or cello for elopements, proposals, cocktail hours and
+                intimate events.
               </p>
 
               <a class="text-link" href="contact.html">
                 Request a quote
               </a>
+
             </div>
+
           </article>
 
         </div>
+
       </div>
+
     </section>
 
-    <!-- Event flow -->
+    <!-- =====================================================
+         EVENT FLOW
+         ===================================================== -->
+
     <section class="section">
+
       <div class="container event-flow">
 
         <div>
-          <span class="eyebrow">From aisle to cocktail hour</span>
 
-          <h2>Music that moves with your day.</h2>
+          <span class="eyebrow">
+            From aisle to cocktail hour
+          </span>
+
+          <h2>
+            Music that moves with your day.
+          </h2>
 
           <p class="section-copy">
             We can perform throughout your celebration and coordinate with your
-            planner or venue team so musical transitions feel natural and
-            polished.
+            planner or venue team so musical transitions feel natural and polished.
           </p>
 
           <ol class="timeline">
+
             <li>
-              <strong>Guest arrival</strong>
+              <strong>
+                Guest arrival
+              </strong>
+
               Set the atmosphere with welcoming prelude music.
             </li>
 
             <li>
-              <strong>Ceremony</strong>
-              Processional, bridal entrance, interludes and recessional, timed
-              to the day.
+              <strong>
+                Ceremony
+              </strong>
+
+              Processional, bridal entrance, interludes and recessional,
+              timed to the day.
             </li>
 
             <li>
-              <strong>Cocktail hour &amp; beyond</strong>
+              <strong>
+                Cocktail hour &amp; beyond
+              </strong>
+
               Classical favorites, pop covers, jazz, rock and more.
             </li>
+
           </ol>
+
         </div>
 
         <div class="image-frame image-frame--landscape">
+
           <img
             src="assets/images/coral-casino-ocean.jpg"
             alt="Oceanfront wedding ceremony at the Coral Casino in Santa Barbara"
             loading="lazy"
           >
+
         </div>
 
       </div>
+
     </section>
 
-    <!-- Testimonial -->
+    <!-- =====================================================
+         TESTIMONIAL
+         ===================================================== -->
+
     <section class="quote-band">
+
       <div class="container quote-wrap">
 
-        <div class="quote-mark">“</div>
+        <div class="quote-mark">
+          “
+        </div>
 
         <blockquote>
-          The trio was better than I could ever imagine. It was so beautiful
-          and dramatic and exactly what I wanted.
+          The trio was better than I could ever imagine. It was so beautiful and
+          dramatic and exactly what I wanted.
         </blockquote>
 
-        <cite>— Alison, SBSQ client</cite>
+        <cite>
+          — Alison, SBSQ client
+        </cite>
 
       </div>
+
     </section>
 
-    <!-- Local experience -->
+    <!-- =====================================================
+         LOCAL EXPERIENCE
+         ===================================================== -->
+
     <section class="section section--cream">
+
       <div class="container center">
 
-        <span class="eyebrow">Local experience</span>
+        <span class="eyebrow">
+          Local experience
+        </span>
 
         <h2>
           At home in Santa Barbara's most beautiful settings.
@@ -558,8 +828,7 @@
 
         <p class="lede">
           Our musicians perform celebrations across the coast, wine country,
-          gardens, historic courtyards and destination venues throughout the
-          region.
+          gardens, historic courtyards and destination venues throughout the region.
         </p>
 
         <div class="featured-row">
@@ -601,112 +870,155 @@
           </a>
 
         </div>
+
       </div>
+
     </section>
 
-    <!-- Gallery -->
+    <!-- =====================================================
+         GALLERY
+         ===================================================== -->
+
     <section class="section">
+
       <div class="container">
 
         <div class="section-head">
+
           <div>
-            <span class="eyebrow">A glimpse of the music</span>
-            <h2>Made for moments like these.</h2>
+
+            <span class="eyebrow">
+              A glimpse of the music
+            </span>
+
+            <h2>
+              Made for moments like these.
+            </h2>
+
           </div>
 
           <a class="text-link" href="listenwatch.html">
             Listen &amp; watch
           </a>
+
         </div>
 
         <div class="gallery-grid">
 
           <figure class="gallery-item gallery-item--1">
+
             <img
               src="assets/images/quartet-wedding.jpg"
               alt="Santa Barbara String Quartet performing at a wedding"
               loading="lazy"
             >
+
           </figure>
 
           <figure class="gallery-item gallery-item--2">
+
             <img
               src="assets/images/quartet-ojai.jpg"
               alt="Santa Barbara String Quartet performing in Ojai"
               loading="lazy"
             >
+
           </figure>
 
           <figure class="gallery-item gallery-item--3">
+
             <img
               src="assets/images/coral-casino-ocean.jpg"
               alt="Oceanfront wedding at the Coral Casino in Santa Barbara"
               loading="lazy"
             >
+
           </figure>
 
           <figure class="gallery-item gallery-item--4">
+
             <img
               src="assets/images/trio-event.jpg"
               alt="Santa Barbara string trio performing at an event"
               loading="lazy"
             >
+
           </figure>
 
           <figure class="gallery-item gallery-item--5">
+
             <img
               src="assets/images/coral-casino-quartet.jpg"
               alt="Santa Barbara String Quartet performing at the Coral Casino"
               loading="lazy"
             >
+
           </figure>
 
           <figure class="gallery-item gallery-item--6">
+
             <img
               src="assets/images/musicians-alpaca.jpg"
               alt="Santa Barbara String Quartet musicians"
               loading="lazy"
             >
+
           </figure>
 
           <figure class="gallery-item gallery-item--7">
+
             <img
               src="assets/images/candlelight-quartet.png"
               alt="Santa Barbara String Quartet after a candlelight concert"
               loading="lazy"
             >
+
           </figure>
 
           <figure class="gallery-item gallery-item--8">
+
             <img
               src="assets/images/katrina-cello.jpg"
               alt="Cellist performing with the Santa Barbara String Quartet"
               loading="lazy"
             >
+
           </figure>
 
           <figure class="gallery-item gallery-item--9">
+
             <img
               src="assets/images/sbsq-oaks.jpg"
               alt="Wedding ceremony beneath oak trees in Santa Barbara wine country"
               loading="lazy"
             >
+
           </figure>
 
         </div>
+
       </div>
+
     </section>
 
-    <!-- Final call to action -->
+    <!-- =====================================================
+         FINAL CTA
+         ===================================================== -->
+
     <section class="site-cta">
+
       <div class="container site-cta-inner">
 
         <div>
-          <h2>Let's make your entrance unforgettable.</h2>
+
+          <h2>
+            Let's make your entrance unforgettable.
+          </h2>
 
           <p>
             Tell us your date, venue and the atmosphere you have in mind.
           </p>
+
         </div>
 
         <a class="button button--light" href="contact.html">
@@ -714,71 +1026,133 @@
         </a>
 
       </div>
+
     </section>
 
   </main>
 
+  <!-- =======================================================
+       FOOTER
+       ======================================================= -->
+
   <footer class="site-footer">
+
     <div class="container">
 
       <div class="footer-grid">
 
         <div class="footer-brand">
+
           <a
             class="footer-logo-card"
             href="index.html"
             aria-label="Santa Barbara String Quartet home"
           >
+
             <img
               class="footer-logo-original"
               src="assets/images/logo-sbsq.png"
               alt="Santa Barbara String Quartet logo"
             >
+
           </a>
 
           <p>
-            Professional live string music for weddings and private events throughout Santa Barbara and the Central
-            Coast.
+            Professional live string music for weddings and private events throughout
+            Santa Barbara and the Central Coast.
           </p>
+
         </div>
 
         <div>
-          <div class="footer-title">Explore</div>
+
+          <div class="footer-title">
+            Explore
+          </div>
 
           <ul class="footer-list">
-            <li><a href="about.html">About</a></li>
-            <li><a href="listenwatch.html">Listen / Watch</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
 
-        <div>
-          <div class="footer-title">Serving</div>
-
-          <ul class="footer-list">
-            <li>Santa Barbara</li>
-            <li>Montecito</li>
-            <li>Goleta &amp; Carpinteria</li>
-            <li>Ojai</li>
-            <li>Santa Ynez &amp; Los Olivos</li>
-          </ul>
-        </div>
-
-        <div>
-          <div class="footer-title">Inquiries</div>
-
-          <ul class="footer-list">
             <li>
+              <a href="about.html">
+                About
+              </a>
+            </li>
+
+            <li>
+              <a href="listenwatch.html">
+                Listen / Watch
+              </a>
+            </li>
+
+            <li>
+              <a href="reviews.html">
+                Reviews
+              </a>
+            </li>
+
+            <li>
+              <a href="contact.html">
+                Contact
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div>
+
+          <div class="footer-title">
+            Serving
+          </div>
+
+          <ul class="footer-list">
+
+            <li>
+              Santa Barbara
+            </li>
+
+            <li>
+              Montecito
+            </li>
+
+            <li>
+              Goleta &amp; Carpinteria
+            </li>
+
+            <li>
+              Ojai
+            </li>
+
+            <li>
+              Santa Ynez &amp; Los Olivos
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div>
+
+          <div class="footer-title">
+            Inquiries
+          </div>
+
+          <ul class="footer-list">
+
+            <li>
+
               <a
                 class="footer-email"
                 href="mailto:emily.sommermann@gmail.com"
               >
                 emily.sommermann@gmail.com
               </a>
+
             </li>
 
             <li>
+
               <a
                 href="https://www.instagram.com/santabarbarastringquartet/"
                 target="_blank"
@@ -786,18 +1160,30 @@
               >
                 Instagram @santabarbarastringquartet
               </a>
+
             </li>
+
           </ul>
+
         </div>
 
       </div>
 
       <div class="footer-bottom">
-        <span>© 2026 Santa Barbara String Quartet</span>
-        <span>Santa Barbara, California</span>
+
+        <span>
+          © 2026 Santa Barbara String Quartet
+        </span>
+
+        <span>
+          Santa Barbara, California
+        </span>
+
       </div>
 
     </div>
+
   </footer>
+
 </body>
 </html>
